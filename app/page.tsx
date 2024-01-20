@@ -16,13 +16,21 @@ export default function Home() {
           priority
         />
       </div>
-      <InstructionText text="Getting Started - Clone this repository using the following command:" />
+      <InstructionText text="Welcome to the final year team project repository." />
+      <InstructionText text="This is a Next.js project bootstrapped with Bun." />
+      <InstructionText text="If using a Windows Machine, it is recommeded to use Windows Subsytem for Linux" />
+      <InstructionText text="This ensures better compatibility, tools and environments, smoother operation of the development workflow, and a more consistent experience." />
+      <InstructionText text="Instructions for installing WSL can be found here:" />
+      <Link href="https://learn.microsoft.com/en-us/windows/wsl/install">
+        <InstructionCode code="Install WSL 2" />
+      </Link>
+      <InstructionText text="In WSL, clone this repository using the following command:" />
       <InstructionCode code="git clone git@github.com:craigtkhill/final-year-team-project.git" />
       <InstructionText text="Change directory to the cloned repository:" />
       <InstructionCode code="cd final-year-team-project" />
       <InstructionText text="install the Bun package manager" />
       <Link href="https://bun.sh/docs/installation">
-        <InstructionCode code="https://bun.sh/docs/installation" />
+        <InstructionCode code="Install Bun Package Manager" />
       </Link>{" "}
       <InstructionText
         text={
