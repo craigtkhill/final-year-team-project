@@ -31,7 +31,9 @@ export default function RootLayout({
         <main
           className={`${quicksand.variable} font-quicksand max-w-[640px] w-full mx-auto flex flex-col items-center`}
         >
-          <Image className="w-24 h-24" src="/logo.svg" alt="Logo" />
+          {" "}
+          {/* <Image className="w-24 h-24" src="/logo.svg" alt="Logo" /> */}
+          Entry Point
           {children}
         </main>
       </body>
