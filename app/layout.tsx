@@ -28,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {children}
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-          Entry point
+        <main
+          className={`${quicksand.variable} font-quicksand max-w-[640px] w-full mx-auto flex flex-col items-center`}
+        >
+          <Image className="w-24 h-24" src="/logo.svg" alt="Logo" />
+          {children}
         </main>
       </body>
     </html>
