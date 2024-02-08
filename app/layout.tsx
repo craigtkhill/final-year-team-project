@@ -33,7 +33,6 @@ export default function RootLayout({
         >
           {" "}
           {/* <Image className="w-24 h-24" src="/logo.svg" alt="Logo" /> */}
-          Entry Point
           {children}
         </main>
       </body>
