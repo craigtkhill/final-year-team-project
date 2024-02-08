@@ -16,9 +16,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center">
-      <p className="text-4xl font-bold text-center">
-        Final Year Team Project in Psychology and Computing
-      </p>
+      <p className="text-4xl font-bold text-center">Welcome to the Quiz!</p>
       {/* <Image className="w-24 h-24" src="/logo.svg" alt="Logo" /> */}
       <Button text="Start Quiz" onClick={handleButtonClick} />
     </div>
