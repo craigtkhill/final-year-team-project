@@ -10,7 +10,7 @@ const TOTAL_QUESTIONS = 10;
 const getQuestions = async (
   amount: number,
   difficulty: Difficulty
-): Promise<QuestionState> => {
+): Promise<QuestionState[]> => {
   const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
   const data = await fetch(endpoint);
   const { results } = await data.json();
