@@ -50,7 +50,6 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
 
   return (
     <div className="text-black text-center">
-      <p className="p-8 font-bold text-[20px]">Score: {score}</p>
       <p className="text-[#9f50ac] font-bold pb-2 text-[14px]"></p>
       <p className="p-8 font-bold text-[20px]">
         Question {currentQuestionIndex + 1} out of {totalQuestions}
@@ -63,16 +62,21 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
         correctAnswer={questions[currentQuestionIndex].correct_answer}
         onClick={handleOnAnswerClick}
       />
-      <div className="flex justify-between mt-16">
-        <Button text="Previous" onClick={() => handleChangeQuestion(-1)} />
-        <Button
-          text={currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
-          onClick={() =>
-            currentQuestionIndex === totalQuestions - 1
-              ? router.push("/result")
-              : handleChangeQuestion(1)
-          }
-        />
+      <p className="p-8 font-bold text-[20px]">Score: {score}</p>
+      <div className="flex justify-center mt-16">
+        {/* <Button text="Previous" onClick={() => handleChangeQuestion(-1)} /> */}
+        {isQuestionAnswered ? (
+          <Button
+            text={currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
+            onClick={() =>
+              currentQuestionIndex === totalQuestions - 1
+                ? router.push("/result")
+                : handleChangeQuestion(1)
+            }
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
