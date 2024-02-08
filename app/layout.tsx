@@ -16,8 +16,8 @@ const quicksand = Quicksand({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Final Year Team Project in Psychology and Computing",
-  description: "Final Year Team Project in Psychology and Computing",
+  title: "Quiz",
+  description: "Quiz",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main
-          className={`${quicksand.variable} font-quicksand max-w-[640px] w-full mx-auto flex flex-col items-center`}
+          className={`${quicksand.variable} font-quicksand max-w-[640px] w-full mx-auto flex flex-col justify-center items-center sm:max-w-none`}
         >
           {" "}
           {/* <Image className="w-24 h-24" src="/logo.svg" alt="Logo" /> */}
