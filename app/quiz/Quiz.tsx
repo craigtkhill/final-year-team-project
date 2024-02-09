@@ -73,7 +73,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
             onClick={() => {
               if (currentQuestionIndex === totalQuestions - 1) {
                 if (score > 6) {
-                  router.push("/result");
+                  router.push("/character");
                 } else {
                   setCurrentQuestionIndex(0);
                   setScore(0);
