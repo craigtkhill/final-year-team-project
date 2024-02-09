@@ -62,17 +62,27 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
         correctAnswer={questions[currentQuestionIndex].correct_answer}
         onClick={handleOnAnswerClick}
       />
-      <p className="p-8 font-bold text-[20px]">Score: {score}</p>
-      <div className="flex justify-center mt-16">
+      <p className="p-8 font-bold text-[20px]">
+        Score: {score} / {totalQuestions}
+      </p>
+      <div className="flex justify-center">
         {/* <Button text="Previous" onClick={() => handleChangeQuestion(-1)} /> */}
         {isQuestionAnswered ? (
           <Button
             text={currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
-            onClick={() =>
-              currentQuestionIndex === totalQuestions - 1
-                ? router.push("/result")
-                : handleChangeQuestion(1)
-            }
+            onClick={() => {
+              if (currentQuestionIndex === totalQuestions - 1) {
+                if (score > 6) {
+                  router.push("/result");
+                } else {
+                  setCurrentQuestionIndex(0);
+                  setScore(0);
+                  setUserAnswers({});
+                }
+              } else {
+                handleChangeQuestion(1);
+              }
+            }}
           />
         ) : (
           <></>
