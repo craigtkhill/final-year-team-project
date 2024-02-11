@@ -24,7 +24,7 @@ const getQuestions = async (
 };
 
 const Quizpage = async () => {
-  const questions = await getQuestions(TOTAL_QUESTIONS, Difficulty.EASY);
+  const questions = await getQuestions(TOTAL_QUESTIONS, Difficulty.HARD);
   return <Quiz questions={questions} totalQuestions={TOTAL_QUESTIONS} />;
 };
 
