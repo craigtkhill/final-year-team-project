@@ -22,7 +22,7 @@ const QuestionCard = ({
       className="text-[20px] max-w-[400px]"
       dangerouslySetInnerHTML={{ __html: question }}
     />
-    <div className="flex flex-col items-center pt-8">
+    <div className="flex flex-col items-center pt-4 pl-4 pr-4">
       {answers.map((answer) => (
         <div
           key={answer}
