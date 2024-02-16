@@ -62,7 +62,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
         correctAnswer={questions[currentQuestionIndex].correct_answer}
         onClick={handleOnAnswerClick}
       />
-      <p className="p-8 font-bold text-[20px]">
+      <p className="p-4 font-bold text-[20px]">
         Score: {score} / {totalQuestions}
       </p>
       <div className="flex justify-center">
