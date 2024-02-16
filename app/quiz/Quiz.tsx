@@ -83,6 +83,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
                 handleChangeQuestion(1);
               }
             }}
+            bgColor="#9f50ac"
           />
         ) : (
           <></>

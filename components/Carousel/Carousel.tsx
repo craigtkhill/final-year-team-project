@@ -44,9 +44,13 @@ const Carousel = ({ images }: { images: Image[] }) => {
         />
       </div>
       <div className="flex items-center justify-center space-x-10 mt-5">
-        <Button text="Prev" onClick={handlePrev} />
-        <Button text="Choose Character" onClick={handleChooseCharacter} />
-        <Button text="Next" onClick={handleNext} />
+        <Button text="Prev" onClick={handlePrev} bgColor="#006400" />
+        <Button
+          text="Choose Character"
+          onClick={handleChooseCharacter}
+          bgColor="#006400"
+        />
+        <Button text="Next" onClick={handleNext} bgColor="#006400" />
       </div>
     </>
   );
