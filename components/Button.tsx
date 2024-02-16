@@ -1,7 +1,7 @@
 type Props = {
   text: string;
   onClick: () => void;
-  bgColor?: string;
+  bgColor: string;
 };
 
 const Button = ({ text, onClick, bgColor }: Props) => {
