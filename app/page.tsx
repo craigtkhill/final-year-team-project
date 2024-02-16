@@ -28,7 +28,11 @@ export default function Home() {
         below to begin the quiz!
       </p>
       {/* <Image className="w-24 h-24" src="/logo.svg" alt="Logo" /> */}
-      <Button text="Start Quiz" onClick={handleButtonClick} bgColor="#006400" />
+      <Button
+        text="Start Quiz"
+        onClick={handleButtonClick}
+        bgColor={"#006400"}
+      />
     </div>
   );
 }
