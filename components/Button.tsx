@@ -8,7 +8,7 @@ const Button = ({ text, onClick, bgColor }: Props) => {
   return (
     <button
       onClick={onClick}
-      className={`bg-[#006400] select-none text-white font-bold py-2 px-4 rounded`}
+      className={`bg-[#55ac78] select-none text-white font-bold py-2 px-4 rounded`}
     >
       {text}
     </button>
