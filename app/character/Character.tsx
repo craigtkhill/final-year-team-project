@@ -1,39 +1,20 @@
 import Carousel from "@/components/Carousel/Carousel";
 
-// fetch the images using an api
-
 const characters = [
-  {
-    id: 1,
-    name: "Rick",
-    image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-  },
-  {
-    id: 2,
-    name: "Morty",
-    image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
-  },
-  {
-    id: 3,
-    name: "Summer",
-    image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
-  },
-  {
-    id: 4,
-    name: "Beth",
-    image: "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
-  },
-  {
-    id: 5,
-    name: "Jerry",
-    image: "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
-  },
+  "/characters/char1.png",
+  "/characters/char2.png",
+  "/characters/char3.png",
+  "/characters/char4.png",
+  "/characters/char5.png",
+  "/characters/char6.png",
+  "/characters/char7.png",
+  "/characters/char8.png",
 ];
 
 export default function Character() {
   return (
     <div className="max-w-lg">
-      <Carousel images={characters} />
+      <Carousel imagePaths={characters} />
     </div>
   );
 }

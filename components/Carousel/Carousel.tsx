@@ -1,58 +1,68 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
 
-type Image = {
-  id: number;
-  name: string;
-  image: string;
-};
-
-const Carousel = ({ images }: { images: Image[] }) => {
+const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const router = useRouter();
 
   const handleNext = () => {
     setCurrentImage((prevImage) =>
-      prevImage === images.length - 1 ? 0 : prevImage + 1
+      prevImage === imagePaths.length - 1 ? 0 : prevImage + 1
     );
   };
 
   const handlePrev = () => {
     setCurrentImage((prevImage) =>
-      prevImage === 0 ? images.length - 1 : prevImage - 1
+      prevImage === 0 ? imagePaths.length - 1 : prevImage - 1
     );
   };
 
-  const router = useRouter();
-
   const handleChooseCharacter = () => {
-    router.push("/explore");
+    router.push(`/explore/${currentImage + 1}`);
+  };
+
+  const imageTransitionStyle = {
+    transition: "transform 0.5s ease-in-out",
+    transform: `translateX(${currentImage * -100}%)`,
   };
 
   return (
-    <>
-      <div className="flex items-center justify-center mt-20">
-        <Image
-          src={images[currentImage].image}
-          alt={images[currentImage].name}
-          width={400}
-          height={600}
-          className="rounded-lg shadow-md max-w-full h-auto"
-        />
+    <div className="relative flex flex-col items-center justify-center mt-20">
+      <div className="flex items-center justify-between w-full max-w-3xl">
+        <Button onClick={handlePrev} bgColor="#006400">
+          &#x2190;
+        </Button>
+        <div className="overflow-hidden flex justify-center w-full">
+          <div className="flex w-full" style={imageTransitionStyle}>
+            {imagePaths.map((path, index) => (
+              <div
+                className="flex-shrink-0 w-full flex justify-center"
+                key={index}
+              >
+                <Image
+                  src={path}
+                  alt={`Character ${index + 1}`}
+                  width={150}
+                  height={300}
+                  className="rounded-lg shadow-md max-w-full h-auto"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        <Button onClick={handleNext} bgColor="#006400">
+          &#x2192;
+        </Button>
       </div>
-      <div className="flex items-center justify-center space-x-10 mt-5">
-        <Button text="Prev" onClick={handlePrev} bgColor="#006400" />
-        <Button
-          text="Choose Character"
-          onClick={handleChooseCharacter}
-          bgColor="#006400"
-        />
-        <Button text="Next" onClick={handleNext} bgColor="#006400" />
+      <div className=" mt-4">
+        <Button onClick={handleChooseCharacter} bgColor="#008000">
+          Choose Character
+        </Button>
       </div>
-    </>
+    </div>
   );
 };
 

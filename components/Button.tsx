@@ -1,16 +1,17 @@
 type Props = {
-  text: string;
   onClick: () => void;
   bgColor: string;
+  children: React.ReactNode;
 };
 
-const Button = ({ text, onClick, bgColor }: Props) => {
+const Button = ({ onClick, bgColor, children }: Props) => {
   return (
     <button
       onClick={onClick}
-      className={`bg-[#55ac78] select-none text-white font-bold py-2 px-4 rounded`}
+      style={{ backgroundColor: bgColor }}
+      className="select-none text-white font-bold py-2 px-4 rounded"
     >
-      {text}
+      {children}
     </button>
   );
 };
