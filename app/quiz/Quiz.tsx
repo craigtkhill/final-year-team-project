@@ -69,7 +69,6 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
         {/* <Button text="Previous" onClick={() => handleChangeQuestion(-1)} /> */}
         {isQuestionAnswered ? (
           <Button
-            text={currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
             onClick={() => {
               if (currentQuestionIndex === totalQuestions - 1) {
                 if (score > 6) {
@@ -84,7 +83,9 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
               }
             }}
             bgColor="#9f50ac"
-          />
+          >
+            {currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
+          </Button>
         ) : (
           <></>
         )}
