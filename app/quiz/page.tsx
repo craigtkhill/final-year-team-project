@@ -3,7 +3,7 @@ import { shuffleArray } from "@/utils/arrayUtils";
 // Components
 import Quiz from "./Quiz";
 // Types
-import { Difficulty, QuestionState, Question } from "@/types/quiz";
+import { QuestionState } from "@/types/quiz";
 // Questions Data
 import questionsData from "./questions.json"; // Adjust the path as necessary
 
