@@ -32,7 +32,7 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
   return (
     <div className="relative flex flex-col items-center justify-center mt-20">
       <div className="flex items-center justify-between w-full max-w-3xl">
-        <Button onClick={handlePrev} bgColor="#006400">
+        <Button onClick={handlePrev} bgColor="#55ac78">
           &#x2190;
         </Button>
         <div className="overflow-hidden flex justify-center w-full">
@@ -53,12 +53,12 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
             ))}
           </div>
         </div>
-        <Button onClick={handleNext} bgColor="#006400">
+        <Button onClick={handleNext} bgColor="#55ac78">
           &#x2192;
         </Button>
       </div>
       <div className=" mt-4">
-        <Button onClick={handleChooseCharacter} bgColor="#008000">
+        <Button onClick={handleChooseCharacter} bgColor="#55ac78">
           Choose Character
         </Button>
       </div>
