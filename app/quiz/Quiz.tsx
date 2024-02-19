@@ -59,7 +59,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
       <p className="p-4 font-bold text-[20px]">
         Score: {score} / {totalQuestions}
       </p>
-      {/* Conditionally render the button and explanation based on whether the question is answered */}
+
       {isQuestionAnswered && (
         <div className="flex flex-col items-center justify-center space-y-4">
           <Button
@@ -80,7 +80,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
           >
             {currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
           </Button>
-          <div className="mt-4 p-4 bg-purple-100 border-l-4 border-purple-500 text-purple-700">
+          <div className="mt-4 p-4 bg-purple-100 border-l-4 border-purple-500 text-purple-700 w-full max-w-md mx-auto">
             <p className="font-semibold">Explanation:</p>
             <p>{questions[currentQuestionIndex].explanation}</p>
           </div>
