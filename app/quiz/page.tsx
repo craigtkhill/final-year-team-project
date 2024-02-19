@@ -4,17 +4,15 @@ import { shuffleArray } from "@/utils/arrayUtils";
 import Quiz from "./Quiz";
 // Types
 import { Difficulty, QuestionState, Question } from "@/types/quiz";
+// Questions Data
+import questionsData from "./questions.json"; // Adjust the path as necessary
 
 const TOTAL_QUESTIONS = 10;
 
-const getQuestions = async (
-  amount: number,
-  difficulty: Difficulty
-): Promise<QuestionState[]> => {
-  const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
-  const data = await fetch(endpoint);
-  const { results } = await data.json();
-  return results.map((question: Question) => ({
+const getQuestions = async (amount: number): Promise<QuestionState[]> => {
+  const selectedQuestions = shuffleArray(questionsData).slice(0, amount);
+
+  return selectedQuestions.map((question) => ({
     ...question,
     answers: shuffleArray([
       ...question.incorrect_answers,
@@ -24,7 +22,7 @@ const getQuestions = async (
 };
 
 const Quizpage = async () => {
-  const questions = await getQuestions(TOTAL_QUESTIONS, Difficulty.HARD);
+  const questions = await getQuestions(TOTAL_QUESTIONS); // Difficulty is ignored in this mock-up
   return <Quiz questions={questions} totalQuestions={TOTAL_QUESTIONS} />;
 };
 
