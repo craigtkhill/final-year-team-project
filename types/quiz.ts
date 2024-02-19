@@ -5,12 +5,11 @@ export enum Difficulty {
 }
 
 export type Question = {
-  category: string;
   correct_answer: string;
-  difficulty: Difficulty;
   incorrect_answers: string[];
   question: string;
   type: string;
+  explanation: string;
 };
 
 export type QuestionState = Question & { answers: string[] };

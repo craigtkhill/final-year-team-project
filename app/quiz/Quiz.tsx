@@ -12,6 +12,7 @@ type Props = {
   questions: Array<QuestionState>;
   totalQuestions: number;
 };
+
 const Quiz = ({ questions, totalQuestions }: Props) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
   const [score, setScore] = React.useState(0);
@@ -26,13 +27,9 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
     answer: string,
     currentQuestionIndex: number
   ) => {
-    // if the user has already answered the question, return
     if (userAnswers[currentQuestionIndex]) return;
-    // add the user's answer to the userAnswers object
     const isCorrect = questions[currentQuestionIndex].correct_answer === answer;
-    // add score if the answer is correct
     if (isCorrect) setScore((prev) => prev + 1);
-    // save the user's answer
     setUserAnswers((prev) => ({
       ...prev,
       [currentQuestionIndex]: answer,
@@ -41,11 +38,8 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
 
   const handleChangeQuestion = (step: number) => {
     const newQuestionIndex = currentQuestionIndex + step;
-    if (newQuestionIndex < 0 || newQuestionIndex >= totalQuestions) {
-      return;
-    } else {
-      setCurrentQuestionIndex(newQuestionIndex);
-    }
+    if (newQuestionIndex < 0 || newQuestionIndex >= totalQuestions) return;
+    setCurrentQuestionIndex(newQuestionIndex);
   };
 
   return (
@@ -65,9 +59,9 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
       <p className="p-4 font-bold text-[20px]">
         Score: {score} / {totalQuestions}
       </p>
-      <div className="flex justify-center">
-        {/* <Button text="Previous" onClick={() => handleChangeQuestion(-1)} /> */}
-        {isQuestionAnswered ? (
+      {/* Conditionally render the button and explanation based on whether the question is answered */}
+      {isQuestionAnswered && (
+        <div className="flex flex-col items-center justify-center space-y-4">
           <Button
             onClick={() => {
               if (currentQuestionIndex === totalQuestions - 1) {
@@ -86,10 +80,12 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
           >
             {currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
           </Button>
-        ) : (
-          <></>
-        )}
-      </div>
+          <div className="mt-4 p-4 bg-purple-100 border-l-4 border-purple-500 text-purple-700">
+            <p className="font-semibold">Explanation:</p>
+            <p>{questions[currentQuestionIndex].explanation}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
