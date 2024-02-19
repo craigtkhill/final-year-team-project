@@ -21,7 +21,8 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
   };
 
   const handleChooseCharacter = () => {
-    router.push(`/explore/${currentImage + 1}`);
+    // router.push(`/location/${currentImage + 1}`);
+    router.push(`/location`);
   };
 
   const imageTransitionStyle = {
