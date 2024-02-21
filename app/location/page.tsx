@@ -20,8 +20,9 @@ export default function Location() {
     setCountry(selectedCountry);
   };
 
-  const handleSubmit = () => {
-    router.push("/explore");
+  const handleSubmit = (country: string) => {
+    const url = `/explore?country=${encodeURIComponent(country.toLowerCase())}`;
+    router.push(url);
   };
 
   return (
@@ -49,7 +50,7 @@ export default function Location() {
 
       <div className="mt-8">
         <button
-          onClick={handleSubmit}
+          onClick={handleSubmit.bind(null, country)}
           className="w-32 h-12 bg-[#9f50ac] text-white"
         >
           Continue

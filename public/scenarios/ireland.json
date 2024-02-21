@@ -1,0 +1,27 @@
+{
+  "title": "Time Travel to Ireland, 1750",
+  "description": "The year is 1750 in Ireland, a time of significant change and development. As you embark on this journey, your actions will have consequences on the environment and the future of air quality. Choose wisely:",
+  "year": "1750",
+  "choices": [
+    {
+      "id": 1,
+      "text": "Introduce crop rotation in agriculture to improve soil fertility without overuse.",
+      "consequence": "This practice reduces the need for fallow fields and decreases deforestation for agriculture, leading to less air pollution and a healthier ecosystem."
+    },
+    {
+      "id": 2,
+      "text": "Invest in the development of peatlands for fuel.",
+      "consequence": "While providing a local energy source, extensive peat extraction leads to habitat destruction and releases large amounts of carbon dioxide, worsening air quality over time."
+    },
+    {
+      "id": 3,
+      "text": "Support the expansion of linen manufacturing using water-powered mills.",
+      "consequence": "This choice promotes industrial growth with minimal air pollution compared to coal-fired production, encouraging sustainable economic development."
+    },
+    {
+      "id": 4,
+      "text": "Promote reforestation and the planting of native trees to offset carbon emissions.",
+      "consequence": "Your efforts lead to increased biodiversity, improved air quality, and the sequestration of carbon, showcasing an early understanding of ecological balance."
+    }
+  ]
+}
