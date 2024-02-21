@@ -1,12 +1,13 @@
 "use client";
 import { Suspense, useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Button from "@/components/Button";
 
 interface Choice {
   id: number;
   text: string;
+  consequence: string;
 }
 
 interface CountryScenario {
@@ -15,6 +16,10 @@ interface CountryScenario {
   year: string;
   choices: Choice[];
 }
+
+const CountryDataWithNoSSR = dynamic(() => Promise.resolve(CountryData), {
+  ssr: false,
+});
 
 const CountryData = ({ country }: { country: string }) => {
   const [scenario, setScenario] = useState<CountryScenario | null>(null);
@@ -25,7 +30,9 @@ const CountryData = ({ country }: { country: string }) => {
       .catch((err) => console.error("Failed to load country data", err));
   }, [country]);
 
-  return scenario ? (
+  if (!scenario) return <div>Loading...</div>;
+
+  return (
     <div>
       <div className="flex justify-center mb-6">
         <Image
@@ -51,14 +58,19 @@ const CountryData = ({ country }: { country: string }) => {
         ))}
       </div>
     </div>
-  ) : (
-    <div>Loading...</div>
   );
 };
 
 const ExploreCountry = () => {
-  const searchParams = useSearchParams();
-  const country = searchParams.get("country");
+  const [country, setCountry] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const countryParam = params.get("country");
+    if (countryParam) {
+      setCountry(countryParam);
+    }
+  }, []);
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -66,7 +78,7 @@ const ExploreCountry = () => {
         <h1 className="text-2xl font-bold text-center mb-6">
           Explore {country}
         </h1>
-        {country && <CountryData country={country} />}
+        {country && <CountryDataWithNoSSR country={country} />}
       </div>
     </Suspense>
   );
