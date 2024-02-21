@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
+import Modal from "./Modal";
 
 const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [showModal, setShowModal] = useState(false);
   const router = useRouter();
 
   const handleNext = () => {
@@ -21,8 +23,17 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
   };
 
   const handleChooseCharacter = () => {
-    // router.push(`/location/${currentImage + 1}`);
+    
+    setShowModal(true);
+    
+  };
+
+  const handleYesClick = () => {
     router.push(`/location`);
+  };
+
+  const handleNoClick = () => {
+    setShowModal(false);
   };
 
   const imageTransitionStyle = {
@@ -62,6 +73,14 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
         <Button onClick={handleChooseCharacter} bgColor="#55ac78">
           Choose Character
         </Button>
+      </div>
+      <div>
+        <Modal
+          imagePath={imagePaths[currentImage]}
+          onYesClick={handleYesClick}
+          onNoClick={handleNoClick}
+          show={showModal}
+        />
       </div>
     </div>
   );

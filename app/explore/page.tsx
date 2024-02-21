@@ -1,6 +1,9 @@
 import Image from "next/image";
 
+
 const ExplorePage = () => {
+  var selected_char = "/characters/char1.png";
+  
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <div className="mb-8">
@@ -12,7 +15,7 @@ const ExplorePage = () => {
         />
       </div>
       <div className="mb-8">
-        <Image src="/character.jpg" alt="Character" width={200} height={200} />
+        <Image src={selected_char} alt="Character" width={200} height={200} />
       </div>
       <div className="flex justify-between w-96 mb-8">
         <div className="flex flex-col items-center">
