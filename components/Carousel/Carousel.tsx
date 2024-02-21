@@ -21,8 +21,8 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
   };
 
   const handleChooseCharacter = () => {
-    // router.push(`/location/${currentImage + 1}`);
-    router.push(`/location`);
+    router.push(`/location/`);
+    // router.push(`/explore/${currentImage + 1}`);
   };
 
   const imageTransitionStyle = {
@@ -49,6 +49,7 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
                   width={150}
                   height={300}
                   className="rounded-lg shadow-md max-w-full h-auto"
+                  fill={false}
                 />
               </div>
             ))}
