@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Location() {
@@ -49,12 +49,14 @@ export default function Location() {
       </div>
 
       <div className="mt-8">
-        <button
-          onClick={handleSubmit.bind(null, country)}
-          className="w-32 h-12 bg-[#9f50ac] text-white"
-        >
-          Continue
-        </button>
+        <Suspense fallback={<div>Loading...</div>}>
+          <button
+            onClick={handleSubmit.bind(null, country)}
+            className="w-32 h-12 bg-[#9f50ac] text-white"
+          >
+            Continue
+          </button>
+        </Suspense>
       </div>
     </div>
   );
