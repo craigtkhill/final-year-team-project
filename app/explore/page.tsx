@@ -10,25 +10,25 @@ interface Choice {
   consequence: string;
 }
 
-interface CountryScenario {
+interface LocationScenario {
   title: string;
   description: string;
   year: string;
   choices: Choice[];
 }
 
-const CountryDataWithNoSSR = dynamic(() => Promise.resolve(CountryData), {
+const LocationDataWithNoSSR = dynamic(() => Promise.resolve(LocationData), {
   ssr: false,
 });
 
-const CountryData = ({ country }: { country: string }) => {
-  const [scenario, setScenario] = useState<CountryScenario | null>(null);
+const LocationData = ({ location }: { location: string }) => {
+  const [scenario, setScenario] = useState<LocationScenario | null>(null);
 
   useEffect(() => {
-    import(`/public/scenarios/${country}.json`)
+    import(`/public/scenarios/${location}.json`)
       .then((data) => setScenario(data.default))
-      .catch((err) => console.error("Failed to load country data", err));
-  }, [country]);
+      .catch((err) => console.error("Failed to load location data", err));
+  }, [location]);
 
   if (!scenario) return <div>Loading...</div>;
 
@@ -36,8 +36,8 @@ const CountryData = ({ country }: { country: string }) => {
     <div>
       <div className="flex justify-center mb-6">
         <Image
-          src={`/scenes/${country}.png`}
-          alt={`Explore ${country}`}
+          src={`/scenes/${location}.png`}
+          alt={`Explore ${location}`}
           width={250}
           height={150}
           className="w-full max-w-xs object-cover rounded-lg"
@@ -61,14 +61,14 @@ const CountryData = ({ country }: { country: string }) => {
   );
 };
 
-const ExploreCountry = () => {
-  const [country, setCountry] = useState<string | null>(null);
+const ExploreLocation = () => {
+  const [location, setLocation] = useState<string | null>(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const countryParam = params.get("country");
-    if (countryParam) {
-      setCountry(countryParam);
+    const locationParam = params.get("location");
+    if (locationParam) {
+      setLocation(locationParam);
     }
   }, []);
 
@@ -76,12 +76,12 @@ const ExploreCountry = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <div className="p-4 max-w-md mx-auto">
         <h1 className="text-2xl font-bold text-center mb-6">
-          Explore {country}
+          Explore {location}
         </h1>
-        {country && <CountryDataWithNoSSR country={country} />}
+        {location && <LocationDataWithNoSSR location={location} />}
       </div>
     </Suspense>
   );
 };
 
-export default ExploreCountry;
+export default ExploreLocation;
