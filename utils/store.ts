@@ -11,11 +11,16 @@ export const useQuizStore = create<QuizScoreStore>((set) => ({
 }));
 
 type CharacterStore = {
-  id: number;
+  selectedImagePath: string;
+  setSelectedImagePath: (imagePath: string) => void;
 };
 
 export const useCharacterStore = create<CharacterStore>((set) => ({
-  id: 0,
+  selectedImagePath: "",
+  setSelectedImagePath: (imagePath) => {
+    set({ selectedImagePath: imagePath });
+    console.log("Selected image path: ", imagePath);
+  },
 }));
 
 export type LocationStore = {
