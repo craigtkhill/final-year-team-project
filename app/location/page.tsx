@@ -1,22 +1,23 @@
 "use client";
-
-import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useLocationStore } from "@/utils/store";
 
 export default function Location() {
-  const [location, setLocation] = useState("");
   const router = useRouter();
+  const { name: selectedLocationName } = useLocationStore();
+  const { setLocation } = useLocationStore();
 
-  const locations = ["Dublin", "Cork"];
+  const locations = [
+    { id: 1, name: "dublin" },
+    { id: 2, name: "cork" },
+  ];
 
-  const handleLocationSelect = (selectedLocation: string) => {
-    setLocation(selectedLocation);
+  const handleLocationSelect = (location: { id: number; name: string }) => {
+    setLocation(location.id, location.name);
   };
 
-  const handleSubmit = (location: string) => {
-    const url = `/explore?location=${encodeURIComponent(
-      location.toLowerCase()
-    )}`;
+  const handleSubmit = () => {
+    const url = `/explore`;
     router.push(url);
   };
 
@@ -27,17 +28,17 @@ export default function Location() {
       </h1>
 
       <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5 w-full max-w-4xl">
-        {locations.map((locationName) => (
-          <div key={locationName} className="p-2">
+        {locations.map((location) => (
+          <div key={location.id} className="p-2">
             <button
-              onClick={() => handleLocationSelect(locationName)}
+              onClick={() => handleLocationSelect(location)}
               className={`w-full h-12 text-center border-2 border-black ${
-                location === locationName
+                selectedLocationName === location.name
                   ? "bg-[#55ac78] text-white"
                   : "bg-white text-black"
               }`}
             >
-              {locationName}
+              {location.name}
             </button>
           </div>
         ))}
@@ -45,8 +46,11 @@ export default function Location() {
 
       <div className="mt-8">
         <button
-          onClick={handleSubmit.bind(null, location)}
-          className="w-32 h-12 bg-[#9f50ac] text-white"
+          onClick={handleSubmit}
+          disabled={!selectedLocationName}
+          className={`w-32 h-12 ${
+            selectedLocationName ? "bg-[#9f50ac]" : "bg-gray-200"
+          } text-white`}
         >
           Continue
         </button>
