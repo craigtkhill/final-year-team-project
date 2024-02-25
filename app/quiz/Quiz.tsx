@@ -20,6 +20,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
     {}
   );
   const isQuestionAnswered = userAnswers[currentQuestionIndex] ? true : false;
+  const [latestIsCorrect, setLatestIsCorrect] = React.useState(false);
 
   const router = useRouter();
 
@@ -29,6 +30,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
   ) => {
     if (userAnswers[currentQuestionIndex]) return;
     const isCorrect = questions[currentQuestionIndex].correct_answer === answer;
+    setLatestIsCorrect(isCorrect);
     if (isCorrect) setScore((prev) => prev + 1);
     setUserAnswers((prev) => ({
       ...prev,
@@ -80,6 +82,9 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
           >
             {currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
           </Button>
+          <div>
+            <p>{latestIsCorrect ? "Correct!" : "Incorrect."}</p>
+          </div>
           <div className="mt-4 p-4 bg-purple-100 border-l-4 border-purple-500 text-purple-700 w-full max-w-md mx-auto">
             <p className="font-semibold">Explanation:</p>
             <p>{questions[currentQuestionIndex].explanation}</p>
@@ -91,3 +96,5 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
 };
 
 export default Quiz;
+
+
