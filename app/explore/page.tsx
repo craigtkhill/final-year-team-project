@@ -5,6 +5,7 @@ import Image from "next/image";
 import Button from "@/components/Button";
 import { useLocationStore } from "@/utils/store";
 import type { LocationStore } from "@/utils/store";
+import { useCharacterStore } from "@/utils/store";
 
 interface Choice {
   id: number;

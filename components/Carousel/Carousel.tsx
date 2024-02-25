@@ -4,11 +4,16 @@ import Image from "next/image";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
 import Modal from "./Modal";
+import { useCharacterStore } from "@/utils/store";
 
 const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
+
+  const setSelectedImagePath = useCharacterStore(
+    (state) => state.setSelectedImagePath
+  );
 
   const handleNext = () => {
     setCurrentImage((prevImage) =>
@@ -27,6 +32,7 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
   };
 
   const handleYesClick = () => {
+    setSelectedImagePath(imagePaths[currentImage]);
     router.push(`/location`);
   };
 
@@ -41,6 +47,7 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
 
   return (
     <div className="relative flex flex-col items-center justify-center mt-20">
+      {/* Carousel controls and images */}
       <div className="flex items-center justify-between w-full max-w-3xl">
         <Button onClick={handlePrev} bgColor="#55ac78">
           &#x2190;
@@ -68,19 +75,17 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
           &#x2192;
         </Button>
       </div>
-      <div className=" mt-4">
+      <div className="mt-4">
         <Button onClick={handleChooseCharacter} bgColor="#55ac78">
           Choose Character
         </Button>
       </div>
-      <div>
-        <Modal
-          imagePath={imagePaths[currentImage]}
-          onYesClick={handleYesClick}
-          onNoClick={handleNoClick}
-          show={showModal}
-        />
-      </div>
+      <Modal
+        imagePath={imagePaths[currentImage]}
+        onYesClick={handleYesClick}
+        onNoClick={handleNoClick}
+        show={showModal}
+      />
     </div>
   );
 };
