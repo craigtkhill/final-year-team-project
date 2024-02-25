@@ -1,8 +1,10 @@
 "use client";
-import { Suspense, useState, useEffect } from "react";
+import { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Button from "@/components/Button";
+import { useLocationStore } from "@/utils/store";
+import type { LocationStore } from "@/utils/store";
 
 interface Choice {
   id: number;
@@ -50,7 +52,9 @@ const LocationData = ({ location }: { location: string }) => {
           <Button
             key={choice.id}
             bgColor="#55ac78"
-            onClick={() => (window.location.href = `/explore/${choice.id}`)}
+            onClick={() =>
+              (window.location.href = `/explore/${choice.consequence}`)
+            }
             className="text-sm py-2 px-4 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out"
           >
             {choice.text}
@@ -62,21 +66,13 @@ const LocationData = ({ location }: { location: string }) => {
 };
 
 const ExploreLocation = () => {
-  const [location, setLocation] = useState<string | null>(null);
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const locationParam = params.get("location");
-    if (locationParam) {
-      setLocation(locationParam);
-    }
-  }, []);
+  const location = useLocationStore((state: LocationStore) => state.name);
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="p-4 max-w-md mx-auto">
         <h1 className="text-2xl font-bold text-center mb-6">
-          Explore {location}
+          Explore {location || "..."}
         </h1>
         {location && <LocationDataWithNoSSR location={location} />}
       </div>
