@@ -6,8 +6,14 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  /* --background-end-rgb: 215, 228, 192; */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
+  background-color: #d7e4c0; /* global background colour */
+}
+
+.circle-button {
+  @apply w-64 h-64 p-4 rounded-full flex items-center justify-center;
 }

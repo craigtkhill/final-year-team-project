@@ -76,7 +76,7 @@ const Carousel = ({ imagePaths }: { imagePaths: string[] }) => {
         </Button>
       </div>
       <div className="mt-4">
-        <Button onClick={handleChooseCharacter} bgColor="#55ac78">
+        <Button onClick={handleChooseCharacter} bgColor="#55ac78" className="circle-button">
           Choose Character
         </Button>
       </div>
