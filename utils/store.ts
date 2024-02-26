@@ -3,11 +3,13 @@ import { create } from "zustand";
 type QuizScoreStore = {
   count: number;
   increment: () => void;
+  totalQuestions: number;
 };
 
 export const useQuizStore = create<QuizScoreStore>((set) => ({
   count: 0,
   increment: () => set((state) => ({ count: state.count + 1 })),
+  totalQuestions: 10,
 }));
 
 type CharacterStore = {
@@ -36,3 +38,8 @@ export const useLocationStore = create<LocationStore>((set) => ({
     set({ id, name });
   },
 }));
+
+type AdventureStore = {
+  adventure: string;
+  setAdventure: (adventure: string) => void;
+};

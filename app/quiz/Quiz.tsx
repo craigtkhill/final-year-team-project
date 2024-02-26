@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-// Import Zustand store
-import { useQuizStore } from "@/utils/store"; // Update the path accordingly
+import { useQuizStore } from "@/utils/store";
 // Components
 import Button from "@/components/Button";
 import QuestionCard from "@/components/QuestionCard/QuestionCard";
@@ -24,7 +23,6 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
 
   const router = useRouter();
 
-  // Using Zustand for score management
   const score = useQuizStore((state) => state.count);
   const incrementScore = useQuizStore((state) => state.increment);
 
@@ -71,14 +69,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
           <Button
             onClick={() => {
               if (currentQuestionIndex === totalQuestions - 1) {
-                if (score > 6) {
-                  router.push("/character");
-                } else {
-                  setCurrentQuestionIndex(0);
-                  // Resetting score using Zustand instead of local state
-                  useQuizStore.setState({ count: 0 });
-                  setUserAnswers({});
-                }
+                router.push("quiz/result");
               } else {
                 handleChangeQuestion(1);
               }
