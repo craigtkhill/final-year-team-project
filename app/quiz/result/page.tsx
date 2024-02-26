@@ -24,7 +24,9 @@ const Results = () => {
       <p className="text-xl my-4">
         Your score: {score} / {totalQuestions}
       </p>
-      <Button onClick={handleDecision}>Proceed</Button>
+      <Button onClick={handleDecision} bgColor="bg-[#9f50ac]">
+        {score > 7 ? "Choose your character" : "Try again"}
+      </Button>
     </div>
   );
 };
