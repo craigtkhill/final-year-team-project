@@ -5,12 +5,15 @@ import Quiz from "./Quiz";
 // Types
 import { QuestionState } from "@/types/quiz";
 // Questions Data
-import questionsData from "./questions.json"; // Adjust the path as necessary
+import questionsData from "./questions.json";
+import { useQuizStore } from "@/utils/store";
 
-const TOTAL_QUESTIONS = 10;
+// const TOTAL_QUESTIONS = 10;
 
 const getQuestions = async (amount: number): Promise<QuestionState[]> => {
-  const selectedQuestions = questionsData.slice(0, amount);
+  const selectedQuestions = questionsData; //.slice(0, amount);
+  // use zustand to update the totalQuestions
+  useQuizStore.setState({ totalQuestions: selectedQuestions.length });
 
   return selectedQuestions.map((question) => ({
     ...question,
@@ -22,8 +25,13 @@ const getQuestions = async (amount: number): Promise<QuestionState[]> => {
 };
 
 const Quizpage = async () => {
-  const questions = await getQuestions(TOTAL_QUESTIONS); // Difficulty is ignored in this mock-up
-  return <Quiz questions={questions} totalQuestions={TOTAL_QUESTIONS} />;
+  const questions = await getQuestions(useQuizStore.getState().totalQuestions);
+  return (
+    <Quiz
+      questions={questions}
+      totalQuestions={useQuizStore.getState().totalQuestions}
+    />
+  );
 };
 
 export default Quizpage;
