@@ -10,7 +10,7 @@ import questionsData from "./questions.json"; // Adjust the path as necessary
 const TOTAL_QUESTIONS = 10;
 
 const getQuestions = async (amount: number): Promise<QuestionState[]> => {
-  const selectedQuestions = shuffleArray(questionsData).slice(0, amount);
+  const selectedQuestions = questionsData.slice(0, amount);
 
   return selectedQuestions.map((question) => ({
     ...question,

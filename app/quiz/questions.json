@@ -1,9 +1,67 @@
 [
   {
+    "question": "Welcome to Eironauts! What is your mission?",
+    "incorrect_answers": ["To defeat enemies"],
+    "correct_answer": "To tackle air pollution through knowledge and action",
+    "explanation": "As an Eironaut, your mission is to tackle air pollution by increasing your knowledge on the topic of air pollution and taking informed actions."
+  },
+  {
+    "question": "How do you navigate through the quiz?",
+    "incorrect_answers": [
+      "Guessing the answers",
+      "Skipping questions",
+      "Choosing all answers"
+    ],
+    "correct_answer": "Choosing the correct answer based on knowledge",
+    "explanation": "Each question has one correct answer. Choose wisely, as your choices will guide your journey and decisions in the adventure ahead."
+  },
+  {
+    "question": "What happens after completing the quiz?",
+    "incorrect_answers": [
+      "You win a prize",
+      "The game ends",
+      "You replay the quiz"
+    ],
+    "correct_answer": "You embark on an adventure",
+    "explanation": "After the quiz, if you get a high enough score, you'll start an adventure influenced by real-time news articles. Your decisions will impact the future of your community."
+  },
+  {
+    "question": "How can your actions lead to a better future?",
+    "incorrect_answers": [
+      "By achieving high scores",
+      "By completing the game quickly",
+      "By purchasing in-game items"
+    ],
+    "correct_answer": "By making informed decisions that benefit society",
+    "explanation": "Your actions and decisions, informed by your knowledge of air pollution, can lead to a healthier planet and a better future for your community."
+  },
+  {
+    "question": "What is the main goal of Eironauts?",
+    "incorrect_answers": [
+      "To entertain players",
+      "To educate players",
+      "To sell in-game items"
+    ],
+    "correct_answer": "To empower players to take action against air pollution",
+    "explanation": "Eironauts aims to empower players to take action against air pollution by providing knowledge and tools to make informed decisions."
+  },
+  {
+    "question": "From which environmental medium are the most hazardous pollutants primarily released?",
+    "incorrect_answers": ["Water", "Land", "All three equally"],
+    "correct_answer": "Air",
+    "explanation": "The most hazardous pollutants are primarily released from the air, more so than from water and land combined."
+  },
+  {
     "question": "What percentage of people breathe polluted air worldwide?",
     "incorrect_answers": ["95%", "85%", "75%"],
     "correct_answer": "99%",
     "explanation": "99% of the world's population breathes air that exceeds WHO guideline limits containing high levels of pollutants."
+  },
+  {
+    "question": "Which of the following transportation methods is the best way to reduce air pollution?",
+    "incorrect_answers": ["Walking", "Riding a bicycle", "Public transport"],
+    "correct_answer": "All the options combined",
+    "explanation": "Walking, riding a bicycle, and using public transport are all effective ways to reduce air pollution."
   },
   {
     "question": "What measures are recommended to combat air pollution in urban areas?",
@@ -16,23 +74,22 @@
     "explanation": "Countries should implement better urban planning policies, regulate dirty emissions, and ban highly polluting vehicles to combat air pollution."
   },
   {
+    "question": "What does PM mean in the context of air pollution?",
+    "incorrect_answers": [
+      "Prime Minister",
+      "Project Manager",
+      "Private Message"
+    ],
+    "correct_answer": "Particulate Matter",
+    "explanation": "In the context of air pollution, PM stands for Particulate Matter."
+  },
+  {
     "question": "Which pollutant can penetrate our body's protective barriers to cause damage to our lungs, heart, and brain?",
     "incorrect_answers": ["PM10", "CO2", "NOx"],
     "correct_answer": "PM2.5",
     "explanation": "PM2.5 is so tiny that it can pass through mucus membranes and other barriers to damage our lungs, heart, and brain."
   },
-  {
-    "question": "How much air does the average American breathe per day?",
-    "incorrect_answers": ["1,500 gallons", "2,000 gallons", "2,500 gallons"],
-    "correct_answer": "3,400 gallons",
-    "explanation": "An average American breathes about 3,400 gallons of air each day."
-  },
-  {
-    "question": "From which environmental medium are the most hazardous pollutants primarily released?",
-    "incorrect_answers": ["Water", "Land", "All three equally"],
-    "correct_answer": "Air",
-    "explanation": "The most hazardous pollutants are primarily released from the air, more so than from water and land combined."
-  },
+
   {
     "question": "How do electric vehicles contribute to reducing air pollutants compared to conventional vehicles?",
     "incorrect_answers": [
@@ -43,44 +100,7 @@
     "correct_answer": "They don’t produce gasses and stir up dirt",
     "explanation": "Electric vehicles produce fewer air pollutants as they stir up dirt but without producing gasses."
   },
-  {
-    "question": "Compared to a cyclist riding past a car, how much more pollutants is a person exposed to while sitting inside the car?",
-    "incorrect_answers": [
-      "2 times more pollutants",
-      "4 times more pollutants",
-      "6 times more pollutants"
-    ],
-    "correct_answer": "8 times more pollutants",
-    "explanation": "Sitting inside a car exposes a person to 8 times more pollutants than a cyclist riding past it."
-  },
-  {
-    "question": "During a heavy traffic jam, how much more polluted can the air inside your car become compared to typical city air?",
-    "incorrect_answers": [
-      "5 times more polluted",
-      "8 times more polluted",
-      "15 times more polluted"
-    ],
-    "correct_answer": "10 times more polluted",
-    "explanation": "During a heavy traffic jam, the air inside your car can become 10 times more polluted than typical city air."
-  },
-  {
-    "question": "Due to air pollution, visitors at the Grand Canyon are sometimes unable to see the other side, which is how many miles away?",
-    "incorrect_answers": ["100 miles", "500 miles", "1500 miles"],
-    "correct_answer": "1000 miles",
-    "explanation": "Air pollution sometimes prevents visitors at the Grand Canyon from seeing the other side, which is 1000 miles away."
-  },
-  {
-    "question": "Which of the following transportation methods is the best way to reduce air pollution?",
-    "incorrect_answers": ["Walking", "Riding a bicycle", "Public transport"],
-    "correct_answer": "All of the above",
-    "explanation": "Walking, riding a bicycle, and using public transport are all effective ways to reduce air pollution."
-  },
-  {
-    "question": "What percentage of air pollution in Manila and the Philippines is caused by approximately 2 million cars?",
-    "incorrect_answers": ["50%", "60%", "70%"],
-    "correct_answer": "80%",
-    "explanation": "Around 2 million cars in Manila and the Philippines cause 80% of air pollution."
-  },
+
   {
     "question": "How does deforestation contribute to air pollution?",
     "incorrect_answers": [
@@ -90,15 +110,5 @@
     ],
     "correct_answer": "By reducing the number of plants and trees that absorb carbon dioxide",
     "explanation": "Deforestation contributes to air pollution by reducing the number of plants and trees that can absorb carbon dioxide."
-  },
-  {
-    "question": "What does PM mean in the context of air pollution?",
-    "incorrect_answers": [
-      "Prime Minister",
-      "Project Manager",
-      "Private Message"
-    ],
-    "correct_answer": "Particulate Matter",
-    "explanation": "In the context of air pollution, PM stands for Particulate Matter."
   }
 ]
