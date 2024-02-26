@@ -4,12 +4,21 @@ type QuizScoreStore = {
   count: number;
   increment: () => void;
   totalQuestions: number;
+  setTotalQuestions: (totalQuestions: number) => void;
+  passingScore?: number;
 };
 
 export const useQuizStore = create<QuizScoreStore>((set) => ({
   count: 0,
   increment: () => set((state) => ({ count: state.count + 1 })),
   totalQuestions: 10,
+  setTotalQuestions: (totalQuestions) => {
+    set({ totalQuestions });
+  },
+  passingScore: 7,
+  setPassingScore: (passingScore: number) => {
+    set({ passingScore });
+  },
 }));
 
 type CharacterStore = {
