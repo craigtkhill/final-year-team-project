@@ -27,7 +27,7 @@ export default function Location() {
         Select Your Location
       </h1>
 
-      <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5 w-full max-w-4xl">
+      <div className="w-full max-w-4xl">
         {locations.map((location) => (
           <div key={location.id} className="p-2">
             <button
@@ -38,7 +38,7 @@ export default function Location() {
                   : "bg-white text-black"
               }`}
             >
-              {location.name}
+              {location.name.charAt(0).toUpperCase() + location.name.slice(1)}
             </button>
           </div>
         ))}

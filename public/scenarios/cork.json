@@ -1,28 +1,195 @@
 {
-  "title": "Time Travel to Cork, 1750",
-  "description": "The year is 1750 in Cork, during the height of the colonial period. This era is marked by the exploitation of natural resources and the beginning of extensive agriculture. Your decisions will impact the environment and influence the future of air quality in this region. Choose your actions wisely:",
-  "year": "1750",
-  "choices": [
+  "scenarios": [
     {
       "id": 1,
-      "text": "Implement sustainable methods in sugar cane plantations to reduce slash-and-burn practices.",
-      "consequence": "Adopting these methods decreases deforestation and soil degradation, leading to lower smoke emissions and contributing to a healthier atmosphere."
+      "title": "Decisions for a Greener Cork",
+      "description": "As a resident of Cork, faced with the ongoing debate about the efficacy of 'robot trees' for air quality improvement, you consider personal choices that could contribute to reducing air pollution in the city. Each action you take can have a significant impact on the future of Cork's air quality.",
+      "link": "https://www.irishexaminer.com/news/munster/arid-41232427.html",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Advocate for and participate in urban tree planting.",
+          "consequence": "By 2030, increased green spaces significantly reduce PM2.5 levels, leading to lower respiratory issues among residents.",
+          "futureYear": 2030
+        },
+        {
+          "id": 2,
+          "text": "Rely more on public transportation and cycling.",
+          "consequence": "By 2025, reduced vehicle emissions lead to a measurable decrease in nitrogen dioxide levels in the city.",
+          "futureYear": 2025
+        },
+        {
+          "id": 3,
+          "text": "Support and use technology solutions for air quality improvement, despite skepticism.",
+          "consequence": "By 2027, improved data and technology adjustments show a modest improvement in air quality, justifying further investments in innovative solutions.",
+          "futureYear": 2027
+        },
+        {
+          "id": 4,
+          "text": "Lobby for the removal of ineffective air purification methods and reallocation of funds to proven solutions.",
+          "consequence": "By 2028, funds are redirected to effective air quality improvement projects, leading to a significant decrease in air pollutants and an increase in public health.",
+          "futureYear": 2028
+        }
+      ]
     },
     {
-      "      id": 2,
-      "text": "Encourage the use of wood from native forests for shipbuilding and export.",
-      "consequence": "This choice boosts the economy but leads to extensive deforestation, reducing air quality and increasing carbon emissions significantly."
+      "id": 2,
+      "title": "Decisions for a Greener Cork",
+      "description": "As a resident of Cork, understanding the significant impact of solid fuel usage on air quality, you are faced with choices that could contribute to a cleaner, healthier environment. Your decisions can help reduce air pollution and its associated health risks, benefitting both the community and the environment.",
+      "link": "https://www.corkcoco.ie/ga/node/8361",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Continue using solid fuels without checking for the 'Approved Fuel' label.",
+          "consequence": "By 2025, unchecked usage of non-approved fuels exacerbates air pollution, leading to an increase in respiratory conditions and a strain on local healthcare services.",
+          "futureYear": 2025
+        },
+        {
+          "id": 2,
+          "text": "Switch to approved, low-smoke solid fuels for heating and ensure chimney maintenance.",
+          "consequence": "By 2030, a significant reduction in particulate matter emissions improves air quality, leading to fewer health issues related to air pollution and enhanced community well-being.",
+          "futureYear": 2030
+        },
+        {
+          "id": 3,
+          "text": "Participate in illegal trade of high-smoke fuels to save on costs.",
+          "consequence": "By 2026, engagement in the illegal fuel trade undermines efforts to improve air quality, harming local businesses and contributing to a rise in pollution-related illnesses.",
+          "futureYear": 2026
+        },
+        {
+          "id": 4,
+          "text": "Advocate for cleaner energy solutions and reduce reliance on solid fuels.",
+          "consequence": "By 2032, advocacy and a shift towards cleaner energy sources lead to groundbreaking policies and initiatives. Cork becomes a model city for air quality improvement, with significantly lower levels of air pollutants.",
+          "futureYear": 2032
+        },
+        {
+          "title": "Breathing Easier in Cork: Your Choices Matter",
+          "description": "Living in Cork, you're aware of the challenges faced by residents, including those with health conditions like asthma, due to air pollution. Inspired by the story of a man in Glanmire unable to safely go for walks, you consider how your actions can make a difference. Each choice you make not only affects your immediate surroundings but also has long-term impacts on the air quality in Cork.",
+          "link": "https://www.corkcoco.ie/ga/node/8361",
+          "choices": [
+            {
+              "id": 1,
+              "text": "Initiate and participate in local campaigns for more air quality monitors in your area.",
+              "consequence": "By 2025, the number of air quality monitors doubles, providing residents with real-time data, enabling safer outdoor activities for vulnerable populations.",
+              "futureYear": 2025
+            },
+            {
+              "id": 2,
+              "text": "Reduce personal car usage by opting for walking, cycling, or public transit.",
+              "consequence": "By 2026, there's a notable decrease in local traffic emissions, leading to improved air quality and a reduction in pollution-related health issues.",
+              "futureYear": 2026
+            },
+            {
+              "id": 3,
+              "text": "Organize community clean-up events to reduce litter and pollution.",
+              "consequence": "By 2027, these efforts lead to cleaner streets and a small but significant improvement in air quality, fostering a stronger sense of community and environmental stewardship.",
+              "futureYear": 2027
+            },
+            {
+              "id": 4,
+              "text": "Advocate for green infrastructure projects, like more urban trees and green spaces.",
+              "consequence": "By 2030, Cork sees a greener urban landscape that not only beautifies the city but also acts as a natural air filter, significantly lowering pollution levels.",
+              "futureYear": 2030
+            }
+          ]
+        }
+      ]
     },
-
     {
       "id": 3,
-      "text": "Promote the extraction of gold using mercury amalgamation.",
-      "consequence": "While lucrative, this method releases toxic mercury vapors into the atmosphere, poisoning air and water, and harming both human health and wildlife."
+      "title": "Breathing Easier in Cork: Your Choices Matter",
+      "description": "Living in Cork, you're aware of the challenges faced by residents, including those with health conditions like asthma, due to air pollution. Inspired by the story of a man in Glanmire unable to safely go for walks, you consider how your actions can make a difference. Each choice you make not only affects your immediate surroundings but also has long-term impacts on the air quality in Cork.",
+      "link": "https://www.corkbeo.ie/news/local-news/asthmatic-cork-man-stuck-inside-28523195",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Initiate and participate in local campaigns for more air quality monitors in your area.",
+          "consequence": "By 2025, the number of air quality monitors doubles, providing residents with real-time data, enabling safer outdoor activities for vulnerable populations.",
+          "futureYear": 2025
+        },
+        {
+          "id": 2,
+          "text": "Reduce personal car usage by opting for walking, cycling, or public transit.",
+          "consequence": "By 2026, there's a notable decrease in local traffic emissions, leading to improved air quality and a reduction in pollution-related health issues.",
+          "futureYear": 2026
+        },
+        {
+          "id": 3,
+          "text": "Organize community clean-up events to reduce litter and pollution.",
+          "consequence": "By 2027, these efforts lead to cleaner streets and a small but significant improvement in air quality, fostering a stronger sense of community and environmental stewardship.",
+          "futureYear": 2027
+        },
+        {
+          "id": 4,
+          "text": "Advocate for green infrastructure projects, like more urban trees and green spaces.",
+          "consequence": "By 2030, Cork sees a greener urban landscape that not only beautifies the city but also acts as a natural air filter, significantly lowering pollution levels.",
+          "futureYear": 2030
+        }
+      ]
     },
     {
       "id": 4,
-      "text": "Advocate for the establishment of protected natural reserves to conserve biodiversity.",
-      "consequence": "Creating reserves helps preserve large areas of forest, enhancing air quality through carbon sequestration and safeguarding diverse ecosystems for future generations."
+      "title": "Decisions for a Greener Cork",
+      "description": "As a resident of Cork, inspired by the city's commitment to clean air demonstrated during Ireland's first Clean Air Day, you ponder over how your personal choices can impact the air quality. Your actions today can significantly shape the future of Cork's environment.",
+      "link": "https://www.corkindependent.com/2023/10/11/cork-pioneers-clean-air-day-in-ireland/",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Reduce the use of solid fuels for home heating and switch to cleaner alternatives.",
+          "consequence": "By 2030, the shift away from solid fuels significantly reduces air pollution, especially during winter months, leading to cleaner air and fewer health issues related to air quality.",
+          "futureYear": 2030
+        },
+        {
+          "id": 2,
+          "text": "Increase reliance on walking, biking, and public transportation for daily commutes.",
+          "consequence": "By 2025, your choice contributes to a noticeable reduction in traffic congestion and vehicular emissions, enhancing air quality and making Cork a more pedestrian-friendly city.",
+          "futureYear": 2025
+        },
+        {
+          "id": 3,
+          "text": "Participate in and advocate for the expansion of urban green spaces within Cork.",
+          "consequence": "By 2027, the city sees a marked increase in urban greenery, which helps improve air quality, provides recreational spaces for residents, and supports biodiversity.",
+          "futureYear": 2027
+        },
+        {
+          "id": 4,
+          "text": "Engage with community initiatives focused on air quality improvement and public education.",
+          "consequence": "By 2028, heightened public awareness and community action lead to significant policy changes and investments in air quality monitoring and improvement projects, resulting in cleaner air city-wide.",
+          "futureYear": 2028
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Fueling a Cleaner Future for Cork",
+      "description": "In light of Cork County Council's warnings against the use of high smoke coal and the impact of solid fuel on air quality, you're evaluating your role in combating air pollution. Your decisions can lead Cork towards a cleaner, healthier future.",
+      "link": "https://www.independent.ie/regionals/cork/news/cork-households-warned-not-to-buy-high-smoke-coal-largely-sourced-illegally-from-northern-ireland/a2147315271.html",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Continue using high smoke coal for heating, disregarding the council's warnings.",
+          "consequence": "By 2025, persistent use of high smoke coal exacerbates air pollution, leading to increased health issues among the population, including higher rates of respiratory conditions.",
+          "futureYear": 2025
+        },
+        {
+          "id": 2,
+          "text": "Switch to approved, low emission solid fuels for home heating.",
+          "consequence": "By 2026, the widespread adoption of low emission fuels significantly reduces particulate matter in the air, improving overall air quality and public health in Cork.",
+          "futureYear": 2026
+        },
+        {
+          "id": 3,
+          "text": "Invest in renewable heating solutions, moving away from solid fuels entirely.",
+          "consequence": "By 2030, a major shift towards renewable heating sources dramatically cuts air pollution levels, setting a standard for clean energy use in urban areas.",
+          "futureYear": 2030
+        },
+        {
+          "id": 4,
+          "text": "Organize a community initiative to raise awareness about the impacts of solid fuel on air quality.",
+          "consequence": "By 2027, increased community awareness and collective action lead to a significant reduction in the use of high smoke fuels, fostering a culture of environmental responsibility.",
+          "futureYear": 2027
+        }
+      ]
     }
   ]
 }

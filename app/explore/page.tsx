@@ -1,22 +1,27 @@
 "use client";
 import { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Button from "@/components/Button";
-import { useLocationStore } from "@/utils/store";
-import type { LocationStore } from "@/utils/store";
-import { useCharacterStore } from "@/utils/store";
+import {
+  useLocationStore,
+  useCharacterStore,
+  LocationStore,
+} from "@/utils/store";
+import Image from "next/image";
+import AdventureResult from "@/components/AdventureResult/AdventureResult";
 
 interface Choice {
   id: number;
   text: string;
   consequence: string;
+  futureYear: number;
 }
 
 interface LocationScenario {
+  id: number;
   title: string;
   description: string;
-  year: string;
+  link: string;
   choices: Choice[];
 }
 
@@ -25,43 +30,79 @@ const LocationDataWithNoSSR = dynamic(() => Promise.resolve(LocationData), {
 });
 
 const LocationData = ({ location }: { location: string }) => {
-  const [scenario, setScenario] = useState<LocationScenario | null>(null);
+  const [scenarios, setScenarios] = useState<LocationScenario[] | null>(null);
+  const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedChoice, setSelectedChoice] = useState<Choice | null>(null);
+  const characterImagePath = useCharacterStore(
+    (state) => state.selectedImagePath
+  );
 
   useEffect(() => {
     import(`/public/scenarios/${location}.json`)
-      .then((data) => setScenario(data.default))
+      .then((data) => setScenarios(data.scenarios))
       .catch((err) => console.error("Failed to load location data", err));
   }, [location]);
 
-  if (!scenario) return <div>Loading...</div>;
+  if (!scenarios) return <div>Loading...</div>;
+
+  const currentScenario = scenarios[currentScenarioIndex];
+
+  const handleChoiceSelection = (choice: Choice) => {
+    setSelectedChoice(choice);
+    setIsModalOpen(true);
+  };
 
   return (
     <div>
-      <div className="flex justify-center mb-6">
+      <div key={currentScenario.id} className="mb-10">
+        <h2 className="text-xl font-semibold mb-4">{currentScenario.title}</h2>
+        <p className="mb-2">{currentScenario.description}</p>
+        <a
+          href={currentScenario.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline mb-4"
+        >
+          Source
+        </a>
+        <div className="flex flex-col gap-4">
+          {currentScenario.choices.map((choice) => (
+            <Button
+              key={choice.id}
+              bgColor="#55ac78"
+              onClick={() => handleChoiceSelection(choice)}
+              className="text-sm py-2 px-4 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out"
+            >
+              {choice.text}
+            </Button>
+          ))}
+        </div>
+      </div>
+      {characterImagePath && (
         <Image
-          src={`/scenes/${location}.png`}
-          alt={`Explore ${location}`}
-          width={250}
-          height={150}
-          className="w-full max-w-xs object-cover rounded-lg"
+          src={characterImagePath}
+          alt="Character Image"
+          width={200}
+          height={200}
+          className="rounded-full"
         />
-      </div>
-      <h2 className="text-xl font-semibold mb-4">{scenario.title}</h2>
-      <p className="mb-6">{scenario.description}</p>
-      <div className="flex flex-col gap-4">
-        {scenario.choices.map((choice) => (
-          <Button
-            key={choice.id}
-            bgColor="#55ac78"
-            onClick={() =>
-              (window.location.href = `/explore/${choice.consequence}`)
-            }
-            className="text-sm py-2 px-4 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out"
-          >
-            {choice.text}
-          </Button>
-        ))}
-      </div>
+      )}
+      {selectedChoice && (
+        <AdventureResult
+          isOpen={isModalOpen}
+          onNextScenario={() => {
+            setIsModalOpen(false);
+            setCurrentScenarioIndex(
+              (prevIndex) => (prevIndex + 1) % scenarios.length
+            );
+          }}
+          outcomeImage="/scenes/cork.png"
+          choiceId={String(selectedChoice.id)}
+          futureYear={selectedChoice.futureYear}
+          consequence={selectedChoice.consequence}
+        ></AdventureResult>
+      )}
     </div>
   );
 };
@@ -72,9 +113,6 @@ const ExploreLocation = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="p-4 max-w-md mx-auto">
-        <h1 className="text-2xl font-bold text-center mb-6">
-          Explore {location || "..."}
-        </h1>
         {location && <LocationDataWithNoSSR location={location} />}
       </div>
     </Suspense>
