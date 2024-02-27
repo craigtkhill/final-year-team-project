@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TailSpin } from "react-loader-spinner"; // Ensure react-loader-spinner is installed
+import { TailSpin } from "react-loader-spinner";
 
 const AdventureResult = ({
   isOpen,
@@ -9,8 +9,16 @@ const AdventureResult = ({
   futureYear,
   consequence,
   children,
+}: {
+  isOpen: boolean;
+  onNextScenario: () => void;
+  outcomeImage: string;
+  choiceId: string;
+  futureYear: number;
+  consequence: string;
+  children?: React.ReactNode;
 }) => {
-  const [stage, setStage] = useState("generating"); // stages: generating, showImage, showInfo
+  const [stage, setStage] = useState("generating");
 
   useEffect(() => {
     if (isOpen) {
@@ -19,8 +27,8 @@ const AdventureResult = ({
         setStage("showImage");
         setTimeout(() => {
           setStage("showInfo");
-        }, 2000); // Delay for showing the text and background after the image
-      }, 2000); // Delay for the generating process
+        }, 2000);
+      }, 2000);
     }
   }, [isOpen, choiceId]);
 
