@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
 import Sentiment from "sentiment";
+import { useBadgeStore } from "@/utils/store"; // Ensure this path matches where your store is defined
 
 const AdventureResult = ({
   isOpen,
@@ -21,6 +22,7 @@ const AdventureResult = ({
 }) => {
   const [stage, setStage] = useState("generating");
   const [sentimentScore, setSentimentScore] = useState(0);
+  const addBadge = useBadgeStore((state) => state.addBadge);
 
   useEffect(() => {
     if (isOpen) {
@@ -34,10 +36,13 @@ const AdventureResult = ({
           const percentageScore = ((normalizedScore + 10) / 20) * 100;
           setSentimentScore(percentageScore);
           setStage("showInfo");
-        }, 2000);
-      }, 2000);
+
+          // Add the outcome image to the badges once analysis is complete
+          addBadge(outcomeImage);
+        }, 2000); // Delay for showing the outcome image
+      }, 2000); // Initial delay for "generating" stage
     }
-  }, [isOpen, choiceId, consequence]);
+  }, [isOpen, choiceId, consequence, addBadge, outcomeImage]);
 
   const renderSentimentCircle = () => {
     const radius = 40;
@@ -108,9 +113,7 @@ const AdventureResult = ({
       }}
     >
       {stage === "generating" && (
-        <>
-          <TailSpin color="#00BFFF" height={80} width={80} />
-        </>
+        <TailSpin color="#00BFFF" height={80} width={80} />
       )}
       {stage !== "generating" && (
         <div
@@ -121,30 +124,25 @@ const AdventureResult = ({
           }`}
           style={{ transitionDelay: stage === "showInfo" ? "500ms" : "0ms" }}
         >
-          <>
-            <div className="text-center mt-4">
-              {stage === "showInfo" && renderSentimentCircle()}
-              <p>{consequence}</p>
-              <div className="italic text-sm mt-4" style={{ color: "#607D8B" }}>
-                Percentage of people who made this choice:{" "}
-                <span
-                  className="font-bold text-lg"
-                  style={{ color: "#FF9800" }}
-                >
-                  {Math.floor(Math.random() * 50)}%
-                </span>
-              </div>
+          <div className="text-center mt-4">
+            {stage === "showInfo" && renderSentimentCircle()}
+            <p>{consequence}</p>
+            <div className="italic text-sm mt-4" style={{ color: "#607D8B" }}>
+              Percentage of people who made this choice:{" "}
+              <span className="font-bold text-lg" style={{ color: "#FF9800" }}>
+                {Math.floor(Math.random() * 50)}%
+              </span>
             </div>
-            {children && <div className="mt-4">{children}</div>}
-            <div className="flex justify-around mt-4">
-              <button
-                onClick={onNextScenario}
-                className="py-2 px-4 rounded bg-blue-500 text-white"
-              >
-                Proceed to Next Scenario
-              </button>
-            </div>
-          </>
+          </div>
+          {children && <div className="mt-4">{children}</div>}
+          <div className="flex justify-around mt-4">
+            <button
+              onClick={onNextScenario}
+              className="py-2 px-4 rounded bg-blue-500 text-white"
+            >
+              Proceed to Next Scenario
+            </button>
+          </div>
         </div>
       )}
     </div>
