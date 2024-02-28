@@ -10,9 +10,17 @@ const AdventureResult = ({
   futureYear,
   consequence,
   children,
+}: {
+  isOpen: boolean;
+  onNextScenario: () => void;
+  outcomeImage: string;
+  choiceId: string;
+  futureYear: number;
+  consequence: string;
+  children?: React.ReactNode;
 }) => {
   const [stage, setStage] = useState("generating");
-  const [sentimentScore, setSentimentScore] = useState(0); // Initialize with 0
+  const [sentimentScore, setSentimentScore] = useState(0);
 
   useEffect(() => {
     if (isOpen) {
@@ -22,8 +30,8 @@ const AdventureResult = ({
         setTimeout(() => {
           const sentiment = new Sentiment();
           const result = sentiment.analyze(consequence);
-          const normalizedScore = Math.min(Math.max(result.score, -10), 10); // Clamp score
-          const percentageScore = ((normalizedScore + 10) / 20) * 100; // Convert to percentage
+          const normalizedScore = Math.min(Math.max(result.score, -10), 10);
+          const percentageScore = ((normalizedScore + 10) / 20) * 100;
           setSentimentScore(percentageScore);
           setStage("showInfo");
         }, 2000);
@@ -32,40 +40,51 @@ const AdventureResult = ({
   }, [isOpen, choiceId, consequence]);
 
   const renderSentimentCircle = () => {
+    const radius = 40;
+    const circumference = 2 * Math.PI * radius;
+    const scorePercentage = sentimentScore;
+    const filledPortion = (scorePercentage / 100) * circumference;
+    const unfilledPortion = circumference - filledPortion;
     const color =
       sentimentScore > 50
         ? "#4CAF50"
         : sentimentScore < 50
         ? "#F44336"
         : "#FFEB3B";
-    const strokeDasharray = `${sentimentScore}, 100`;
+
     return (
-      <svg width="100" height="100" className="mx-auto mb-4">
+      <svg
+        width="100"
+        height="100"
+        className="mx-auto mb-4"
+        viewBox="0 0 100 100"
+      >
         <circle
           cx="50"
           cy="50"
-          r="40"
+          r={radius}
           stroke="#ddd"
-          strokeWidth="10"
+          strokeWidth="8"
           fill="none"
         />
         <circle
           cx="50"
           cy="50"
-          r="40"
+          r={radius}
           stroke={color}
-          strokeWidth="10"
+          strokeWidth="8"
           fill="none"
-          strokeDasharray={strokeDasharray}
-          transform="rotate(-90) translate(-100)"
+          strokeDasharray={`${filledPortion} ${unfilledPortion}`}
+          strokeDashoffset={circumference / 4}
+          transform="rotate(-90 50 50)"
         />
         <text
           x="50"
           y="55"
-          font-size="15"
+          fontSize="15"
           textAnchor="middle"
           fill={color}
-        >{`${sentimentScore.toFixed(0)}%`}</text>
+        >{`${scorePercentage.toFixed(0)}%`}</text>
       </svg>
     );
   };
