@@ -131,7 +131,7 @@ const AdventureResult = ({
                   className="font-bold text-lg"
                   style={{ color: "#FF9800" }}
                 >
-                  {Math.floor(Math.random() * 100)}%
+                  {Math.floor(Math.random() * 50)}%
                 </span>
               </div>
             </div>
