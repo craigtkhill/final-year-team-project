@@ -1,3 +1,5 @@
+"use client";
+import React, { useState, useEffect } from "react";
 // Utils
 import { shuffleArray } from "@/utils/arrayUtils";
 // Components
@@ -8,28 +10,35 @@ import { QuestionState } from "@/types/quiz";
 import questionsData from "./questions.json";
 import { useQuizStore } from "@/utils/store";
 
-// const TOTAL_QUESTIONS = 10;
+const Quizpage = () => {
+  const [questions, setQuestions] = useState<QuestionState[]>([]);
+  const dynamicDifficulty = useQuizStore((state) => state.dynamicDifficulty);
+  const totalQuestions = useQuizStore((state) => state.totalQuestions);
 
-const getQuestions = async (amount: number): Promise<QuestionState[]> => {
-  const selectedQuestions = questionsData; //.slice(0, amount);
-  // use zustand to update the totalQuestions
-  useQuizStore.setState({ totalQuestions: selectedQuestions.length });
+  useEffect(() => {
+    const getQuestions = (amount: number): QuestionState[] => {
+      const selectedQuestions = questionsData.slice(0, amount);
+      return selectedQuestions.map((question) => ({
+        ...question,
+        answers: shuffleArray([
+          ...question.incorrect_answers,
+          question.correct_answer,
+        ]),
+      }));
+    };
 
-  return selectedQuestions.map((question) => ({
-    ...question,
-    answers: shuffleArray([
-      ...question.incorrect_answers,
-      question.correct_answer,
-    ]),
-  }));
-};
+    setQuestions(getQuestions(totalQuestions));
+  }, [totalQuestions]);
 
-const Quizpage = async () => {
-  const questions = await getQuestions(useQuizStore.getState().totalQuestions);
+  if (questions.length === 0) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Quiz
       questions={questions}
-      totalQuestions={useQuizStore.getState().totalQuestions}
+      totalQuestions={totalQuestions}
+      dynamicDifficulty={dynamicDifficulty}
     />
   );
 };

@@ -1,37 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useQuizStore } from "@/utils/store";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const DynamicDifficulty = ({ children }: { children: React.ReactNode }) => {
-  const [isDynamicDifficultyOn, setDynamicDifficultyOn] = useState(true);
-  const [originalTotalQuestions, setOriginalTotalQuestions] = useState<
-    number | null
-  >(null);
-
-  useEffect(() => {
-    const currentTotal = useQuizStore.getState().totalQuestions;
-    if (originalTotalQuestions === null) {
-      setOriginalTotalQuestions(currentTotal);
-    }
-  }, [originalTotalQuestions]);
+  const [isDynamicDifficultyOn, setDynamicDifficulty] = useState(true);
+  const router = useRouter();
 
   const handleToggle = () => {
-    const currentState = useQuizStore.getState();
-    const currentPassingScore = currentState.passingScore ?? 7;
+    setDynamicDifficulty(!isDynamicDifficultyOn);
+  };
 
-    const newIsDynamicDifficultyOn = !isDynamicDifficultyOn;
-
-    if (originalTotalQuestions !== null) {
-      useQuizStore.setState({
-        totalQuestions: newIsDynamicDifficultyOn
-          ? Math.max(originalTotalQuestions - 2, 0)
-          : originalTotalQuestions,
-        passingScore: newIsDynamicDifficultyOn
-          ? Math.max(currentPassingScore - 1, 0)
-          : currentPassingScore + 1,
-      });
-    }
-
-    setDynamicDifficultyOn(newIsDynamicDifficultyOn);
+  const handleDecision = () => {
+    useQuizStore.setState({ count: 0 });
+    useQuizStore.setState({ dynamicDifficulty: isDynamicDifficultyOn });
+    router.push("/quiz");
   };
 
   return (
@@ -40,11 +23,17 @@ const DynamicDifficulty = ({ children }: { children: React.ReactNode }) => {
         <input
           type="checkbox"
           className="form-checkbox h-5 w-5 text-blue-600"
-          checked={isDynamicDifficultyOn}
+          defaultChecked={true}
           onChange={handleToggle}
         />
         <span className="ml-2 text-gray-700 text-sm">{children}</span>
       </label>
+      <button
+        onClick={handleDecision}
+        className="mt-4 py-2 px-4 rounded bg-blue-500 text-white"
+      >
+        Restart Quiz
+      </button>
     </div>
   );
 };

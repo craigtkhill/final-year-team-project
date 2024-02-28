@@ -12,12 +12,7 @@ const Results = () => {
   const passingScore = useQuizStore((state) => state.passingScore);
 
   const handleDecision = () => {
-    if (score > (passingScore ?? 0)) {
-      router.push("/character");
-    } else {
-      useQuizStore.setState({ count: 0 });
-      router.push("/quiz");
-    }
+    router.push("/character");
   };
 
   return (
@@ -26,10 +21,11 @@ const Results = () => {
       <p className="text-xl my-4">
         Your score: {score} / {totalQuestions}
       </p>
-      <Button onClick={handleDecision} bgColor="bg-[#9f50ac]">
-        {score > (passingScore ?? 0) ? "Choose your character" : "Try again"}
-      </Button>
-      {score < (passingScore ?? 0) && (
+      {score > (passingScore ?? 0) ? (
+        <Button onClick={handleDecision} bgColor="bg-[#9f50ac]">
+          Choose Your Character
+        </Button>
+      ) : (
         <DynamicDifficulty>
           Unfortunately, you failed to meet the minimum requirements to earn
           your badge and become and Eironaut. For the next round we will make
