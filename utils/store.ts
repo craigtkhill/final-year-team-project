@@ -48,7 +48,13 @@ export const useLocationStore = create<LocationStore>((set) => ({
   },
 }));
 
-type AdventureStore = {
-  adventure: string;
-  setAdventure: (adventure: string) => void;
+export type BadgeStore = {
+  badges: string[];
+  addBadge: (badge: string) => void;
 };
+
+export const useBadgeStore = create<BadgeStore>((set) => ({
+  badges: [],
+  addBadge: (badge: string) =>
+    set((state) => ({ badges: [...state.badges, badge] })),
+}));

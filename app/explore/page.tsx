@@ -9,6 +9,7 @@ import {
 } from "@/utils/store";
 import Image from "next/image";
 import AdventureResult from "@/components/AdventureResult/AdventureResult";
+import { useRouter } from "next/navigation";
 
 interface Choice {
   id: number;
@@ -34,9 +35,11 @@ const LocationData = ({ location }: { location: string }) => {
   const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedChoice, setSelectedChoice] = useState<Choice | null>(null);
+  const [allScenariosCompleted, setAllScenariosCompleted] = useState(false);
   const characterImagePath = useCharacterStore(
     (state) => state.selectedImagePath
   );
+  const router = useRouter();
 
   useEffect(() => {
     import(`/public/scenarios/${location}.json`)
@@ -52,6 +55,73 @@ const LocationData = ({ location }: { location: string }) => {
     setSelectedChoice(choice);
     setIsModalOpen(true);
   };
+
+  const onNextScenario = () => {
+    setIsModalOpen(false);
+    const nextIndex = (currentScenarioIndex + 1) % scenarios.length;
+    if (nextIndex <= currentScenarioIndex) {
+      setAllScenariosCompleted(true);
+    } else {
+      setCurrentScenarioIndex(nextIndex);
+    }
+  };
+
+  if (allScenariosCompleted) {
+    if (allScenariosCompleted) {
+      return (
+        <div>
+          <h1 className="text-xl font-semibold mb-4">
+            You&apos;ve completed all scenarios!
+          </h1>
+          <Button
+            bgColor="#55ac78"
+            onClick={() => {
+              router.push("/badge");
+            }}
+            className="text-sm py-2 px-4 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out"
+          >
+            View Badges
+          </Button>
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <div key={currentScenario.id} className="mb-10">
+          <h2 className="text-xl font-semibold mb-4">
+            {currentScenario.title}
+          </h2>
+          <p className="mb-2">{currentScenario.description}</p>
+          <a
+            href={currentScenario.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline mb-4"
+          >
+            Source
+          </a>
+        </div>
+      </div>
+    );
+
+    return (
+      <div>
+        <h1 className="text-xl font-semibold mb-4">
+          You&apos;ve completed all scenarios!
+        </h1>
+        <Button
+          bgColor="#55ac78"
+          onClick={() => {
+            router.push("/badge");
+          }}
+          className="text-sm py-2 px-4 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out"
+        >
+          View Badge
+        </Button>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -91,12 +161,7 @@ const LocationData = ({ location }: { location: string }) => {
       {selectedChoice && (
         <AdventureResult
           isOpen={isModalOpen}
-          onNextScenario={() => {
-            setIsModalOpen(false);
-            setCurrentScenarioIndex(
-              (prevIndex) => (prevIndex + 1) % scenarios.length
-            );
-          }}
+          onNextScenario={onNextScenario}
           outcomeImage={`/scenes/${location}-${currentScenario.id}-${selectedChoice.id}.png`}
           choiceId={String(selectedChoice.id)}
           futureYear={selectedChoice.futureYear}
