@@ -16,8 +16,8 @@ const quicksand = Quicksand({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Quiz",
-  description: "Quiz",
+  title: "Eironauts",
+  description: "A game for learning about the air quality and pollution",
 };
 
 export default function RootLayout({
