@@ -45,8 +45,9 @@ const AdventureResult = ({
         alignItems: "center",
         backgroundImage:
           stage !== "generating" ? `url(${outcomeImage})` : "none",
-        backgroundSize: "cover",
+        backgroundSize: "auto 100%",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       {stage === "generating" && (
@@ -65,7 +66,6 @@ const AdventureResult = ({
         >
           <>
             <div className="text-center mt-4">
-              <p>{futureYear}</p>
               <p>{consequence}</p>
               <p>
                 Percentage of people who made this choice:{" "}

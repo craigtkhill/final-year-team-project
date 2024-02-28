@@ -1,28 +1,165 @@
 {
-  "title": "Time Travel to Dublin, 1750",
-  "description": "The year is 1750 in Dublin, during the height of the colonial period. This era is marked by the exploitation of natural resources and the beginning of extensive agriculture. Your decisions will impact the environment and influence the future of air quality in this region. Choose your actions wisely:",
-  "year": "1750",
-  "choices": [
+  "scenarios": [
     {
       "id": 1,
-      "text": "Implement sustainable methods in sugar cane plantations to reduce slash-and-burn practices.",
-      "consequence": "Adopting these methods decreases deforestation and soil degradation, leading to lower smoke emissions and contributing to a healthier atmosphere."
+      "title": "Decisions for Cleaner Air in Dublin",
+      "description": "Living in Dublin, you're aware of the serious air pollution issues stemming from transport emissions and burning solid fuels. With more than 1,600 deaths annually linked to air pollution and associated health costs exceeding €2 billion, the urgency to act is clear. Your choices can lead to a healthier environment and community.",
+      "link": "https://www.irishtimes.com/health/2023/09/30/how-fine-particle-air-pollution-in-dublin-and-other-irish-cities-is-slowly-killing-us/",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Transition your home heating from solid fuels to cleaner alternatives like electricity or heat pumps.",
+          "consequence": "By 2030, a significant reduction in PM2.5 levels is observed in residential areas, contributing to a decrease in respiratory and cardiovascular diseases among the population.",
+          "futureYear": 2030
+        },
+        {
+          "id": 2,
+          "text": "Increase your use of public transport, walking, and cycling, reducing reliance on personal vehicles.",
+          "consequence": "By 2025, a noticeable decline in nitrogen dioxide and PM2.5 levels is recorded, thanks to reduced traffic emissions, leading to improved public health outcomes.",
+          "futureYear": 2025
+        },
+        {
+          "id": 3,
+          "text": "Advocate for and engage in community initiatives to raise awareness about the health risks of air pollution and the importance of clean air actions.",
+          "consequence": "By 2027, public pressure leads to stricter regulations on emissions and solid fuel use, resulting in cleaner air and fewer pollution-related health issues.",
+          "futureYear": 2027
+        },
+        {
+          "id": 4,
+          "text": "Support the development and implementation of green infrastructure projects, such as urban green spaces and efficient public transport systems.",
+          "consequence": "By 2032, Dublin becomes a leading example of a 'heart-healthy city' with sustainable urban planning, significantly reducing air pollution-related health risks.",
+          "futureYear": 2032
+        }
+      ]
     },
     {
-      "      id": 2,
-      "text": "Encourage the use of wood from native forests for shipbuilding and export.",
-      "consequence": "This choice boosts the economy but leads to extensive deforestation, reducing air quality and increasing carbon emissions significantly."
+      "id": 2,
+      "title": "Decisions for a Healthier Dublin",
+      "description": "As a Dubliner, intrigued by the development of a new app designed to guide you through less polluted travel routes in the city, you ponder over personal choices that could minimize your contribution to air pollution. Each decision you make could significantly influence Dublin's air quality in the years to come.",
+      "link": "https://www.rte.ie/brainstorm/2023/1024/1412626-app-green-cycle-walking-routes-dublin-air-quality-data/",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Use the new app to follow green travel routes for daily commutes.",
+          "consequence": "By 2025, widespread use of green routes leads to a 20% reduction in pedestrians and cyclists' exposure to harmful pollutants, enhancing overall public health.",
+          "futureYear": 2025
+        },
+        {
+          "id": 2,
+          "text": "Switch to electric or hybrid vehicles to reduce personal carbon footprint.",
+          "consequence": "By 2030, a significant reduction in carbon emissions results in a 30% decrease in air pollution levels, contributing to cleaner air and a healthier community.",
+          "futureYear": 2030
+        },
+        {
+          "id": 3,
+          "text": "Advocate for and engage in remote working to reduce travel emissions.",
+          "consequence": "By 2026, a cultural shift towards remote work decreases traffic congestion and emissions by 15%, leading to noticeable improvements in air quality.",
+          "futureYear": 2026
+        },
+        {
+          "id": 4,
+          "text": "Promote and participate in carpooling initiatives to cut down on individual car use.",
+          "consequence": "By 2028, carpooling becomes a norm, reducing the number of vehicles on the road by 25% and significantly lowering the emission of pollutants.",
+          "futureYear": 2028
+        }
+      ]
     },
 
     {
       "id": 3,
-      "text": "Promote the extraction of gold using mercury amalgamation.",
-      "consequence": "While lucrative, this method releases toxic mercury vapors into the atmosphere, poisoning air and water, and harming both human health and wildlife."
+      "title": "Decisions for a Cleaner Dublin",
+      "description": "As a Dublin resident aware of the high levels of Nitrogen Dioxide (NO2) and traffic-related pollution, especially in areas like Phibsborough, you ponder on how your personal actions can contribute to reducing air pollution in the city. Your choices can shape the future air quality of Dublin, affecting health and the environment.",
+      "link": "https://irishcycle.com/2023/09/27/dublins-dirty-air-secret-its-officially-not-a-problem-because-its-not-being-measured/",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Opt for walking or cycling for short trips instead of driving.",
+          "consequence": "By 2025, a significant reduction in traffic leads to lower NO2 levels in residential areas, enhancing air quality and community health.",
+          "futureYear": 2025
+        },
+        {
+          "id": 2,
+          "text": "Support and engage in local clean air initiatives and campaigns.",
+          "consequence": "By 2026, increased community engagement leads to the implementation of more green zones and reduced traffic areas, further lowering air pollution levels.",
+          "futureYear": 2026
+        },
+        {
+          "id": 3,
+          "text": "Advocate for and participate in the expansion of public transportation options.",
+          "consequence": "By 2030, expanded and more efficient public transportation reduces reliance on personal vehicles, drastically cutting down NO2 emissions citywide.",
+          "futureYear": 2030
+        },
+        {
+          "id": 4,
+          "text": "Promote and switch to electric vehicles for essential car use.",
+          "consequence": "By 2027, a significant increase in electric vehicle usage decreases the emission of NO2 and particulate matter from brakes and tires, improving air quality.",
+          "futureYear": 2027
+        }
+      ]
     },
     {
       "id": 4,
-      "text": "Advocate for the establishment of protected natural reserves to conserve biodiversity.",
-      "consequence": "Creating reserves helps preserve large areas of forest, enhancing air quality through carbon sequestration and safeguarding diverse ecosystems for future generations."
+      "title": "Decisions for a Cleaner Dublin",
+      "description": "As a Dubliner, you're inspired by the launch of the Urban Sense air quality pilot, which aims to measure real-time CO2 and other gas concentrations across the city. With air quality a pressing concern, you contemplate personal actions that could support this initiative and contribute to improving the city's air. Your decisions now could shape Dublin's environmental future.",
+      "link": "https://www.smartcitiesworld.net/air-quality/dublin-launches-urban-sense-air-quality-pilot-9861",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Engage in community-led air quality monitoring and data sharing.",
+          "consequence": "By 2025, grassroots data collection enhances city-wide air quality initiatives, leading to targeted and effective pollution reduction measures.",
+          "futureYear": 2025
+        },
+        {
+          "id": 2,
+          "text": "Adopt a zero-waste lifestyle, minimizing personal carbon footprint.",
+          "consequence": "By 2030, widespread adoption of low-waste practices among residents drastically reduces the city's overall emissions, contributing to significantly cleaner air.",
+          "futureYear": 2030
+        },
+        {
+          "id": 3,
+          "text": "Invest in and use electric vehicles (EVs) for personal transportation.",
+          "consequence": "By 2027, a surge in EV usage decreases the city's dependency on fossil fuels, markedly lowering air pollution levels.",
+          "futureYear": 2027
+        },
+        {
+          "id": 4,
+          "text": "Promote and participate in energy efficiency programs for homes and businesses.",
+          "consequence": "By 2028, enhanced energy efficiency leads to a substantial reduction in the city's greenhouse gas emissions, improving public health and air quality.",
+          "futureYear": 2028
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Decisions for a Cleaner Dublin",
+      "description": "As a Dubliner aware of the air quality disparities across the city, especially the cleaner air near government buildings compared to other areas, you ponder over personal decisions that can aid in ameliorating the city's air pollution. Your choices could play a pivotal role in shaping a healthier environment for all.",
+      "link": "https://www.independent.ie/irish-news/air-quality-substantially-cleaner-near-government-building-compared-to-many-parts-of-dublin-city/a1438953847.html",
+      "choices": [
+        {
+          "id": 1,
+          "text": "Initiate a community carpool program.",
+          "consequence": "By 2025, the reduction in single-occupancy vehicle trips leads to a noticeable decrease in CO2 emissions, making the air quality in residential areas significantly better.",
+          "futureYear": 2025
+        },
+        {
+          "id": 2,
+          "text": "Promote and engage in energy-efficient home upgrades.",
+          "consequence": "By 2030, widespread adoption of energy-efficient practices in homes leads to lower energy consumption and reduced emissions from residential heating, contributing to clearer skies over Dublin.",
+          "futureYear": 2030
+        },
+        {
+          "id": 3,
+          "text": "Advocate for stricter regulations on industrial emissions.",
+          "consequence": "By 2027, the implementation of tougher emission standards for industries results in a significant drop in harmful pollutants, improving air quality and public health.",
+          "futureYear": 2027
+        },
+        {
+          "id": 4,
+          "text": "Invest in and use renewable energy sources.",
+          "consequence": "By 2032, a substantial shift towards renewable energy sources like wind and solar significantly reduces the reliance on fossil fuels, leading to a major improvement in air quality and a reduction in greenhouse gas emissions.",
+          "futureYear": 2032
+        }
+      ]
     }
   ]
 }

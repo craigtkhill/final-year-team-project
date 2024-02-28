@@ -97,7 +97,7 @@ const LocationData = ({ location }: { location: string }) => {
               (prevIndex) => (prevIndex + 1) % scenarios.length
             );
           }}
-          outcomeImage="/scenes/cork.png"
+          outcomeImage={`/scenes/${location}-${currentScenario.id}-${selectedChoice.id}.png`}
           choiceId={String(selectedChoice.id)}
           futureYear={selectedChoice.futureYear}
           consequence={selectedChoice.consequence}
