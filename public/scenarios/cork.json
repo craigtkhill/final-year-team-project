@@ -61,37 +61,6 @@
           "text": "Advocate for cleaner energy solutions and reduce reliance on solid fuels.",
           "consequence": "By 2032, advocacy and a shift towards cleaner energy sources lead to groundbreaking policies and initiatives. Cork becomes a model city for air quality improvement, with significantly lower levels of air pollutants.",
           "futureYear": 2032
-        },
-        {
-          "title": "Breathing Easier in Cork: Your Choices Matter",
-          "description": "Living in Cork, you're aware of the challenges faced by residents, including those with health conditions like asthma, due to air pollution. Inspired by the story of a man in Glanmire unable to safely go for walks, you consider how your actions can make a difference. Each choice you make not only affects your immediate surroundings but also has long-term impacts on the air quality in Cork.",
-          "link": "https://www.corkcoco.ie/ga/node/8361",
-          "choices": [
-            {
-              "id": 1,
-              "text": "Initiate and participate in local campaigns for more air quality monitors in your area.",
-              "consequence": "By 2025, the number of air quality monitors doubles, providing residents with real-time data, enabling safer outdoor activities for vulnerable populations.",
-              "futureYear": 2025
-            },
-            {
-              "id": 2,
-              "text": "Reduce personal car usage by opting for walking, cycling, or public transit.",
-              "consequence": "By 2026, there's a notable decrease in local traffic emissions, leading to improved air quality and a reduction in pollution-related health issues.",
-              "futureYear": 2026
-            },
-            {
-              "id": 3,
-              "text": "Organize community clean-up events to reduce litter and pollution.",
-              "consequence": "By 2027, these efforts lead to cleaner streets and a small but significant improvement in air quality, fostering a stronger sense of community and environmental stewardship.",
-              "futureYear": 2027
-            },
-            {
-              "id": 4,
-              "text": "Advocate for green infrastructure projects, like more urban trees and green spaces.",
-              "consequence": "By 2030, Cork sees a greener urban landscape that not only beautifies the city but also acts as a natural air filter, significantly lowering pollution levels.",
-              "futureYear": 2030
-            }
-          ]
         }
       ]
     },
@@ -135,8 +104,8 @@
       "choices": [
         {
           "id": 1,
-          "text": "Reduce the use of solid fuels for home heating and switch to cleaner alternatives.",
-          "consequence": "By 2030, the shift away from solid fuels significantly reduces air pollution, especially during winter months, leading to cleaner air and fewer health issues related to air quality.",
+          "text": "Use of solid fuels for home heating",
+          "consequence": "By 2030, burning solid fuels significantly increases air pollution, especially during winter months, leading to greater health issues related to air quality.",
           "futureYear": 2030
         },
         {
