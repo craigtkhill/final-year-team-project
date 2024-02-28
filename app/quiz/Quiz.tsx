@@ -2,18 +2,21 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useQuizStore } from "@/utils/store";
+
 // Components
 import Button from "@/components/Button";
 import QuestionCard from "@/components/QuestionCard/QuestionCard";
+
 // Types
 import type { QuestionState } from "@/types/quiz";
 
 type Props = {
   questions: Array<QuestionState>;
   totalQuestions: number;
+  dynamicDifficulty: boolean;
 };
 
-const Quiz = ({ questions, totalQuestions }: Props) => {
+const Quiz = ({ questions, totalQuestions, dynamicDifficulty }: Props) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = React.useState(0);
   const [userAnswers, setUserAnswers] = React.useState<Record<number, string>>(
     {}
@@ -46,6 +49,23 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
     setCurrentQuestionIndex(newQuestionIndex);
   };
 
+  const getFilteredAnswers = (question: QuestionState) => {
+    if (!dynamicDifficulty) return question.answers;
+
+    const correctAnswer = question.correct_answer;
+    const incorrectAnswers = question.answers.filter(
+      (answer: any) => answer !== correctAnswer
+    );
+
+    // Remove one incorrect answer randomly
+    incorrectAnswers.splice(
+      Math.floor(Math.random() * incorrectAnswers.length),
+      1
+    );
+
+    return [correctAnswer, ...incorrectAnswers].sort(() => Math.random() - 0.5); // Shuffle the answers
+  };
+
   return (
     <div className="text-black text-center">
       <p className="text-[#9f50ac] font-bold pb-2 text-[14px]"></p>
@@ -55,7 +75,7 @@ const Quiz = ({ questions, totalQuestions }: Props) => {
       <QuestionCard
         currentQuestionIndex={currentQuestionIndex}
         question={questions[currentQuestionIndex].question}
-        answers={questions[currentQuestionIndex].answers}
+        answers={getFilteredAnswers(questions[currentQuestionIndex])}
         userAnswer={userAnswers[currentQuestionIndex]}
         correctAnswer={questions[currentQuestionIndex].correct_answer}
         onClick={handleOnAnswerClick}
