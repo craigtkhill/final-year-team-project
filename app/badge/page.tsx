@@ -28,8 +28,8 @@ const EndScreen = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 flex flex-col items-center justify-center">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-md p-6">
+    <div className="min-h-screen p-4 flex flex-col items-center justify-center">
+      <div className="max-w-md w-full rounded-lg shadow-md p-6">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-2">
             Thank you for playing Eironauts!
@@ -44,27 +44,27 @@ const EndScreen = () => {
           <Image
             src={characterImagePath}
             alt="Character"
-            width={150}
-            height={150}
-            className="rounded-full object-cover mx-auto"
+            width={75}
+            height={75}
+            className="object-cover mx-auto"
           />
         </div>
         <div className="flex flex-col space-y-3 mb-6">
           <button
             onClick={goToQuizMode}
-            className="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition duration-300"
+            className="bg-[#7F8487] text-white py-2 rounded-lg transition duration-300"
           >
             Quiz Mode
           </button>
           <button
             onClick={goToAdventureMode}
-            className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg transition duration-300"
+            className="bg-[#55ac78] text-white py-2 rounded-lg transition duration-300"
           >
             Adventure Mode
           </button>
           <button
             onClick={goToChooseEironaut}
-            className="bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition duration-300"
+            className="bg-[#ac5050] text-white py-2 rounded-lg transition duration-300"
           >
             Choose Your Eironaut
           </button>

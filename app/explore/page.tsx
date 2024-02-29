@@ -69,7 +69,8 @@ const LocationData = ({ location }: { location: string }) => {
   if (allScenariosCompleted) {
     if (allScenariosCompleted) {
       return (
-        <div>
+        // make content vertically centered
+        <div className="text-center flex flex-col items-center justify-center h-screen">
           <h1 className="text-xl font-semibold mb-4">
             You&apos;ve completed all scenarios!
           </h1>
@@ -88,18 +89,22 @@ const LocationData = ({ location }: { location: string }) => {
 
     return (
       <div>
-        <div key={currentScenario.id} className="mb-10">
+        <div
+          key={currentScenario.id}
+          className="mb-10
+        "
+        >
           <h2 className="text-xl font-semibold mb-4">
             {currentScenario.title}
           </h2>
-          <p className="mb-2">{currentScenario.description}</p>
+          <p className="mb-2 ">{currentScenario.description}</p>
           <a
             href={currentScenario.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline mb-4"
+            className="text-blue-600 hover:underline mb-4 p-2 rounded"
           >
-            Source
+            News Article
           </a>
         </div>
       </div>
@@ -107,40 +112,46 @@ const LocationData = ({ location }: { location: string }) => {
   }
 
   return (
-    <div>
-      <div key={currentScenario.id} className="mb-10">
-        <h2 className="text-xl font-semibold mb-4">{currentScenario.title}</h2>
-        <p className="mb-2">{currentScenario.description}</p>
+    <div className="px-4 py-2">
+      {" "}
+      {/* make content centered */}
+      <div key={currentScenario.id} className="mb-10 flex flex-col gap-4">
+        <h2 className="text-2xl font-bold mb-3">{currentScenario.title}</h2>{" "}
+        <p className="mb-4 text-base text-gray-800">
+          {currentScenario.description}
+        </p>{" "}
+        {characterImagePath && (
+          <div className="flex justify-center mb-5">
+            {" "}
+            <Image
+              src={characterImagePath}
+              alt="Character"
+              width={75}
+              height={75}
+            />
+          </div>
+        )}
         <a
           href={currentScenario.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 hover:underline mb-4"
+          className="inline-block bg-green-100 text-green-800 hover:bg-green-200 mb-6 p-2 text-center rounded"
         >
-          Source
+          See News Article
         </a>
-        <div className="flex flex-col gap-4">
+        <p className="text-lg font-semibold mb-3 text-center">Take Action</p>{" "}
+        <div className="flex flex-col gap-3">
           {currentScenario.choices.map((choice) => (
-            <Button
+            <button
               key={choice.id}
-              bgColor="#55ac78"
               onClick={() => handleChoiceSelection(choice)}
-              className="text-sm py-2 px-4 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out"
+              className="text-base py-3 px-5 rounded-md hover:bg-green-700 bg-[#7F8487] text-white transition-colors duration-150 ease-in-out"
             >
               {choice.text}
-            </Button>
+            </button>
           ))}
         </div>
       </div>
-      {characterImagePath && (
-        <Image
-          src={characterImagePath}
-          alt="Character Image"
-          width={200}
-          height={200}
-          className="rounded-full"
-        />
-      )}
       {selectedChoice && (
         <AdventureResult
           isOpen={isModalOpen}
@@ -149,7 +160,7 @@ const LocationData = ({ location }: { location: string }) => {
           choiceId={String(selectedChoice.id)}
           futureYear={selectedChoice.futureYear}
           consequence={selectedChoice.consequence}
-        ></AdventureResult>
+        />
       )}
     </div>
   );

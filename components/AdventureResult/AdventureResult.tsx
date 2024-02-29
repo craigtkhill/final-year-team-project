@@ -112,7 +112,7 @@ const AdventureResult = ({
       }}
     >
       {stage === "generating" && (
-        <TailSpin color="#00BFFF" height={80} width={80} />
+        <TailSpin color="#7F8487" height={80} width={80} />
       )}
       {stage !== "generating" && (
         <div
@@ -127,17 +127,18 @@ const AdventureResult = ({
             {stage === "showInfo" && renderSentimentCircle()}
             <p>{consequence}</p>
             <div className="italic text-sm mt-4" style={{ color: "#607D8B" }}>
-              Percentage of people who made this choice:{" "}
-              <span className="font-bold text-lg" style={{ color: "#FF9800" }}>
+              You and{" "}
+              <span className="font-bold text-lg" style={{ color: "#7F8487" }}>
                 {Math.floor(Math.random() * 50)}%
-              </span>
+              </span>{" "}
+              of other people made this choice
             </div>
           </div>
           {children && <div className="mt-4">{children}</div>}
           <div className="flex justify-around mt-4">
             <button
               onClick={onNextScenario}
-              className="py-2 px-4 rounded bg-blue-500 text-white"
+              className="py-2 px-4 rounded bg-[#55ac78] text-white"
             >
               Proceed to Next Scenario
             </button>

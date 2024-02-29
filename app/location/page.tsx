@@ -22,12 +22,10 @@ export default function Location() {
   };
 
   return (
-    <div className="container mx-auto p-4 h-screen flex flex-col justify-center items-center bg-white">
-      <h1 className="text-xl font-bold mb-8 text-center">
-        Select Your Location
-      </h1>
+    <div className="container mx-auto p-4 h-screen flex flex-col justify-center items-center">
+      <h1 className="text-xl font-bold mb-8 text-center">Select a Location</h1>
 
-      <div className="w-full max-w-4xl">
+      <div className="w-full max-w-xl">
         {locations.map((location) => (
           <div key={location.id} className="p-2">
             <button
@@ -49,7 +47,7 @@ export default function Location() {
           onClick={handleSubmit}
           disabled={!selectedLocationName}
           className={`w-32 h-12 ${
-            selectedLocationName ? "bg-[#9f50ac]" : "bg-gray-200"
+            selectedLocationName ? "bg-[#55ac78]" : "bg-gray-200"
           } text-white`}
         >
           Continue
