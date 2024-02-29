@@ -14,9 +14,9 @@
   {
     "question": "What is the main goal of Eironauts?",
     "incorrect_answers": [
-      "To entertain players",
-      "To educate players",
-      "To sell in-game items"
+      "To sell in-game items",
+      "To reach the highest level",
+      "To defeat the final boss"
     ],
     "correct_answer": "To empower players to take action against air pollution",
     "explanation": "Eironauts aims to empower players to take action against air pollution by providing knowledge and tools to make informed decisions."
@@ -91,7 +91,7 @@
     "explanation": "In the EPA 2021 air quality report, all pollutant levels in Ireland exceeded the WHO air quality guidelines."
   },
   {
-    "question": "Does air pollution affect everyone's health equally?",
+    "question": "Air pollution affect everyone's health equally",
     "incorrect_answers": [
       "True",
       "It only affects people with pre-existing conditions",
