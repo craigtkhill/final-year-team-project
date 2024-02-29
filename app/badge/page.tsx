@@ -37,7 +37,7 @@ const EndScreen = () => {
           <p className="mb-6 text-sm text-gray-700">
             We hope you enjoyed your time. From here, you can choose to play
             different parts of the game, such as playing a Quiz, another run of
-            Adventure Mode, or choosing a different Aironaut!
+            Adventure Mode, or choosing a different Eironaut!
           </p>
         </div>
         <div className="mb-6">
