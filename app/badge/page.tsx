@@ -11,7 +11,8 @@ const selectCharacterImagePath = (state: { selectedImagePath: any }) =>
   state.selectedImagePath;
 
 const EndScreen = () => {
-  const badges = useBadgeStore(selectBadges);
+  const badges: any[] = useBadgeStore(selectBadges);
+
   const characterImagePath = useCharacterStore(selectCharacterImagePath);
   const router = useRouter();
 
