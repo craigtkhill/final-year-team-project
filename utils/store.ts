@@ -47,6 +47,12 @@ export const useLocationStore = create<LocationStore>((set) => ({
   },
 }));
 
+export type Badge = {
+  id: number;
+  name: string;
+  imageURL: string;
+};
+
 export type BadgeStore = {
   badges: string[];
   addBadge: (badge: string) => void;
