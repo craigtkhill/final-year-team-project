@@ -6,34 +6,10 @@
     "explanation": "As an Eironaut, your mission is to tackle air pollution by increasing your knowledge on the topic of air pollution and taking informed actions."
   },
   {
-    "question": "How do you navigate through the quiz?",
-    "incorrect_answers": [
-      "Guessing the answers",
-      "Skipping questions",
-      "Choosing all answers"
-    ],
-    "correct_answer": "Choosing the correct answer based on knowledge",
-    "explanation": "Each question has one correct answer. Choose wisely, as your choices will guide your journey and decisions in the adventure ahead."
-  },
-  {
     "question": "What happens after completing the quiz?",
-    "incorrect_answers": [
-      "You win a prize",
-      "The game ends",
-      "You replay the quiz"
-    ],
+    "incorrect_answers": ["You win a prize", "The game ends"],
     "correct_answer": "You embark on an adventure",
     "explanation": "After the quiz, if you get a high enough score, you'll start an adventure influenced by real-time news articles. Your decisions will impact the future of your community."
-  },
-  {
-    "question": "How can your actions lead to a better future?",
-    "incorrect_answers": [
-      "By achieving high scores",
-      "By completing the game quickly",
-      "By purchasing in-game items"
-    ],
-    "correct_answer": "By making informed decisions that benefit society",
-    "explanation": "Your actions and decisions, informed by your knowledge of air pollution, can lead to a healthier planet and a better future for your community."
   },
   {
     "question": "What is the main goal of Eironauts?",
@@ -47,7 +23,7 @@
   },
   {
     "question": "From which environmental medium are the most hazardous pollutants primarily released?",
-    "incorrect_answers": ["Water", "Land", "All three equally"],
+    "incorrect_answers": ["Water", "Land", "All equally"],
     "correct_answer": "Air",
     "explanation": "The most hazardous pollutants are primarily released from the air, more so than from water and land combined."
   },
@@ -56,12 +32,6 @@
     "incorrect_answers": ["95%", "85%", "75%"],
     "correct_answer": "99%",
     "explanation": "99% of the world's population breathes air that exceeds WHO guideline limits containing high levels of pollutants."
-  },
-  {
-    "question": "Which of the following transportation methods is the best way to reduce air pollution?",
-    "incorrect_answers": ["Walking", "Riding a bicycle", "Public transport"],
-    "correct_answer": "All the options combined",
-    "explanation": "Walking, riding a bicycle, and using public transport are all effective ways to reduce air pollution."
   },
   {
     "question": "What measures are recommended to combat air pollution in urban areas?",
@@ -91,17 +61,6 @@
   },
 
   {
-    "question": "How do electric vehicles contribute to reducing air pollutants compared to conventional vehicles?",
-    "incorrect_answers": [
-      "They produce more gasses but stir up less dirt.",
-      "They produce fewer gasses and do not stir up dirt.",
-      "They produce more gasses and stir up more dirt."
-    ],
-    "correct_answer": "They don’t produce gasses and stir up dirt",
-    "explanation": "Electric vehicles produce fewer air pollutants as they stir up dirt but without producing gasses."
-  },
-
-  {
     "question": "How does deforestation contribute to air pollution?",
     "incorrect_answers": [
       "By releasing harmful gasses directly into the atmosphere",
@@ -110,5 +69,61 @@
     ],
     "correct_answer": "By reducing the number of plants and trees that absorb carbon dioxide",
     "explanation": "Deforestation contributes to air pollution by reducing the number of plants and trees that can absorb carbon dioxide."
+  },
+  {
+    "question": "What are the primary causes of outdoor air pollution in Irish Cities during winter?",
+    "incorrect_answers": [
+      "Industrial emissions",
+      "Agricultural activities",
+      "Natural sources"
+    ],
+    "correct_answer": "Solid fuel burning and traffic",
+    "explanation": "Solid fuel burning in winter and traffic in cities are the primary causes of outdoor air pollution in Irish cities, according to the EPA report 2021."
+  },
+  {
+    "question": "In the EPA 2021 air quality report, how did the pollutant levels in Ireland compare to the WHO air quality guidelines?",
+    "incorrect_answers": [
+      "Below the guidelines",
+      "Within the guidelines",
+      "Only some pollutants exceeded the guidelines"
+    ],
+    "correct_answer": "All pollutant levels exceeded the WHO air quality guidelines",
+    "explanation": "In the EPA 2021 air quality report, all pollutant levels in Ireland exceeded the WHO air quality guidelines."
+  },
+  {
+    "question": "Does air pollution affect everyone's health equally?",
+    "incorrect_answers": [
+      "True",
+      "It only affects people with pre-existing conditions",
+      "It only affects outdoor workers"
+    ],
+    "correct_answer": "False",
+    "explanation": "While air pollution is harmful to everyone, children, older people, and pregnant women are more susceptible to air pollution-related diseases."
+  },
+  {
+    "question": "Which pollutant is one of the largest contributors to global warming?",
+    "incorrect_answers": ["Carbon dioxide", "Methane", "Sulfur dioxide"],
+    "correct_answer": "Black carbon",
+    "explanation": "Black carbon, a component of fine particulate matter, is one of the largest contributors to global warming."
+  },
+  {
+    "question": "Have any communities in Ireland developed a clean air strategy?",
+    "incorrect_answers": [
+      "No communities have developed one",
+      "Multiple communities have developed one",
+      "It is under development in all communities"
+    ],
+    "correct_answer": "Cork City is the only local authority to have a clean air strategy",
+    "explanation": "Cork City is the only local authority to have developed a clean air strategy, providing a policy framework for promoting clean air."
+  },
+  {
+    "question": "Are the health impacts of air pollution limited to respiratory diseases, heart diseases, and lung cancer?",
+    "incorrect_answers": [
+      "True",
+      "Only includes respiratory and heart diseases",
+      "Only includes respiratory diseases"
+    ],
+    "correct_answer": "False",
+    "explanation": "Studies have linked higher concentrations of NO2, PM2.5, and PM10 to between 12%-53% higher risk of poor mental wellbeing, indicating that air pollution's health impacts are not limited to physical health but also include neurological or mental health."
   }
 ]

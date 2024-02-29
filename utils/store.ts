@@ -12,8 +12,8 @@ export type QuizScoreStore = {
 export const useQuizStore = create<QuizScoreStore>((set) => ({
   count: 0,
   increment: () => set((state) => ({ count: state.count + 1 })),
-  totalQuestions: 10,
-  passingScore: 7,
+  totalQuestions: 15,
+  passingScore: 10,
   dynamicDifficulty: false,
   setDynamicDifficulty: (dynamicDifficulty: boolean) => {
     set({ dynamicDifficulty });
