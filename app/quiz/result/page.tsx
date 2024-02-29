@@ -29,9 +29,9 @@ const Results = () => {
         <DynamicDifficulty>
           Unfortunately, you did not pass the quiz. However! You can try again
           and apply what you’ve learned. If you’d like, you can choose to make
-          the quiz a little easier by ticking the box. To pass the quiz and join
-          us as an Eironaut, you must score at least 7 out of 10. Have another
-          go!
+          the quiz a little easier or keep it the same difficulty by toggling
+          the slider. To pass the quiz and join us as an Eironaut, you must
+          score at least 7 out of 10. Have another go!
         </DynamicDifficulty>
       )}
     </div>

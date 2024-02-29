@@ -47,7 +47,7 @@ const DynamicDifficulty = ({ children }: { children: React.ReactNode }) => {
               className={`dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition-transform ${
                 isDynamicDifficultyOn
                   ? "transform translate-x-full bg-[#55ac78]"
-                  : "bg-gray-400"
+                  : "bg-white-400"
               }`}
             ></div>
           </div>
