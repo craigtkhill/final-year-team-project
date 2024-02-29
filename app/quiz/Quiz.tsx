@@ -94,14 +94,14 @@ const Quiz = ({ questions, totalQuestions, dynamicDifficulty }: Props) => {
                 handleChangeQuestion(1);
               }
             }}
-            bgColor="#9f50ac"
+            bgColor="#55ac78"
           >
             {currentQuestionIndex === totalQuestions - 1 ? "End" : "Next"}
           </Button>
           <div>
             <p>{latestIsCorrect ? "Correct!" : "Incorrect."}</p>
           </div>
-          <div className="mt-4 p-4 bg-purple-100 border-l-4 border-purple-500 text-purple-700 w-full max-w-md mx-auto">
+          <div className="mt-4 p-4 bg-green-100 border-l-4 border-[#55ac78] text-[#55ac78] w-full max-w-md mx-auto">
             <p className="font-semibold">Explanation:</p>
             <p>{questions[currentQuestionIndex].explanation}</p>
           </div>
