@@ -88,7 +88,7 @@ const AdventureResult = ({
           fontSize="15"
           textAnchor="middle"
           fill={color}
-        >{`${scorePercentage.toFixed(0)}%`}</text>
+        >{`${scorePercentage.toFixed(0)}`}</text>
       </svg>
     );
   };
