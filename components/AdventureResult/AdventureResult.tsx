@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
 import Sentiment from "sentiment";
-import { useBadgeStore } from "@/utils/store"; // Ensure this path matches where your store is defined
+import { useBadgeStore } from "@/utils/store";
 
 const AdventureResult = ({
   isOpen,
@@ -37,10 +37,9 @@ const AdventureResult = ({
           setSentimentScore(percentageScore);
           setStage("showInfo");
 
-          // Add the outcome image to the badges once analysis is complete
           addBadge(outcomeImage);
-        }, 2000); // Delay for showing the outcome image
-      }, 2000); // Initial delay for "generating" stage
+        }, 1500); // Delay for showing the outcome image
+      }, 1500); // Initial delay for "generating" stage
     }
   }, [isOpen, choiceId, consequence, addBadge, outcomeImage]);
 
