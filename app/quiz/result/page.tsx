@@ -27,9 +27,11 @@ const Results = () => {
         </Button>
       ) : (
         <DynamicDifficulty>
-          Unfortunately, you failed to meet the minimum requirements to earn
-          your badge and become and Eironaut. For the next round we will make
-          the quiz a bit easier. If you do not want that just uncheck the box.
+          Unfortunately, you did not pass the quiz. However! You can try again
+          and apply what you’ve learned. If you’d like, you can choose to make
+          the quiz a little easier by ticking the box. To pass the quiz and join
+          us as an Eironaut, you must score at least 7 out of 10. Have another
+          go!
         </DynamicDifficulty>
       )}
     </div>
