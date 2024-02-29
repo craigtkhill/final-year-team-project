@@ -104,23 +104,6 @@ const LocationData = ({ location }: { location: string }) => {
         </div>
       </div>
     );
-
-    return (
-      <div>
-        <h1 className="text-xl font-semibold mb-4">
-          You&apos;ve completed all scenarios!
-        </h1>
-        <Button
-          bgColor="#55ac78"
-          onClick={() => {
-            router.push("/badge");
-          }}
-          className="text-sm py-2 px-4 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out"
-        >
-          View Badge
-        </Button>
-      </div>
-    );
   }
 
   return (
