@@ -116,7 +116,7 @@ const AdventureResult = ({
       )}
       {stage !== "generating" && (
         <div
-          className={`relative mx-auto p-5 w-96 shadow-lg rounded-md bg-white bg-opacity-75 backdrop-filter backdrop-blur-sm ${
+          className={`relative mx-auto p-5 w-96 shadow-lg rounded-md bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm ${
             stage === "showInfo"
               ? "opacity-100 transition-opacity duration-1000 ease-out"
               : "opacity-0"
