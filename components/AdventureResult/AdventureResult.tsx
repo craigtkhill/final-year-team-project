@@ -50,11 +50,11 @@ const AdventureResult = ({
     const filledPortion = (scorePercentage / 100) * circumference;
     const unfilledPortion = circumference - filledPortion;
     const color =
-      sentimentScore > 50
-        ? "#4CAF50"
-        : sentimentScore < 50
-        ? "#F44336"
-        : "#FFEB3B";
+      sentimentScore > 55
+        ? "#55ac78"
+        : sentimentScore < 45
+        ? "#ac5050"
+        : "#FBA834";
 
     return (
       <svg

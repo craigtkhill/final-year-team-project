@@ -79,7 +79,7 @@ const LocationData = ({ location }: { location: string }) => {
             onClick={() => {
               router.push("/badge");
             }}
-            className="text-sm py-2 px-4 rounded hover:bg-green-600 transition-colors duration-150 ease-in-out"
+            className="text-sm py-2 px-4 rounded transition-colors duration-150 ease-in-out"
           >
             View Badges
           </Button>
@@ -135,7 +135,7 @@ const LocationData = ({ location }: { location: string }) => {
           href={currentScenario.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-green-100 text-green-800 hover:bg-green-200 mb-6 p-2 text-center rounded"
+          className="inline-block bg-green-100 text-green-800  mb-6 p-2 text-center rounded"
         >
           See News Article
         </a>
@@ -145,7 +145,7 @@ const LocationData = ({ location }: { location: string }) => {
             <button
               key={choice.id}
               onClick={() => handleChoiceSelection(choice)}
-              className="text-base py-3 px-5 rounded-md hover:bg-green-700 bg-[#7F8487] text-white transition-colors duration-150 ease-in-out"
+              className="text-base py-3 px-5 rounded-md bg-[#7F8487] text-white transition-colors duration-150 ease-in-out"
             >
               {choice.text}
             </button>
