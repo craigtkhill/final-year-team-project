@@ -41,7 +41,7 @@
         {
           "id": 1,
           "text": "Use the new app to follow green travel routes for daily commutes.",
-          "consequence": "By 2025, widespread use of green routes leads to a 20% reduction in pedestrians and cyclists' exposure to harmful pollutants, enhancing overall public health.",
+          "consequence": "By 2025, the widespread adoption of green routes contributes to a remarkable 20% decrease in pedestrians and cyclists' exposure to harmful pollutants, significantly bolstering overall public health.",
           "futureYear": 2025
         },
         {
@@ -59,7 +59,7 @@
         {
           "id": 4,
           "text": "Promote and participate in carpooling initiatives to cut down on individual car use.",
-          "consequence": "By 2028, carpooling becomes a norm, reducing the number of vehicles on the road by 25% and significantly lowering the emission of pollutants.",
+          "consequence": "By 2028, carpooling thrives as a societal norm, leading to a 25% reduction in the number of vehicles on the road and markedly diminishing the emission of pollutants.",
           "futureYear": 2028
         }
       ]
@@ -80,13 +80,13 @@
         {
           "id": 2,
           "text": "Support and engage in local clean air initiatives and campaigns.",
-          "consequence": "By 2026, increased community engagement leads to the implementation of more green zones and reduced traffic areas, further lowering air pollution levels.",
+          "consequence": "By 2026, heightened community engagement joyfully paves the way for the establishment of additional green zones and expanded reduced-traffic areas, significantly enhancing efforts to alleviate air pollution levels.",
           "futureYear": 2026
         },
         {
           "id": 3,
           "text": "Advocate for and participate in the expansion of public transportation options.",
-          "consequence": "By 2030, expanded and more efficient public transportation reduces reliance on personal vehicles, drastically cutting down NO2 emissions citywide.",
+          "consequence": "By 2030, the widespread adoption of expanded and highly efficient public transportation significantly diminishes dependence on personal vehicles, leading to a substantial reduction in NO2 emissions throughout the city.",
           "futureYear": 2030
         },
         {
@@ -144,7 +144,7 @@
         {
           "id": 2,
           "text": "Promote and engage in energy-efficient home upgrades.",
-          "consequence": "By 2030, widespread adoption of energy-efficient practices in homes leads to lower energy consumption and reduced emissions from residential heating, contributing to clearer skies over Dublin.",
+          "consequence": "By 2030, widespread adoption of energy-efficient practices in homes not only significantly reduces energy consumption but also greatly diminishes emissions from residential heating, thereby fostering clearer skies over Dublin.",
           "futureYear": 2030
         },
         {
