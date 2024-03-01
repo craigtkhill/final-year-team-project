@@ -15,13 +15,13 @@
         {
           "id": 2,
           "text": "Rely more on public transportation and cycling.",
-          "consequence": "By 2025, reduced vehicle emissions lead to a measurable decrease in nitrogen dioxide levels in the city.",
+          "consequence": "By 2025, the significant reduction in vehicle emissions contributes to a noticeable improvement in nitrogen dioxide levels within the city, heralding a positive environmental transformation.",
           "futureYear": 2025
         },
         {
           "id": 3,
           "text": "Support and use technology solutions for air quality improvement, despite skepticism.",
-          "consequence": "By 2027, improved data and technology adjustments show a modest improvement in air quality, justifying further investments in innovative solutions.",
+          "consequence": "By 2027, adjusted data and technological advancements indicate a slight enhancement in air quality, warranting additional investments in innovative solutions.",
           "futureYear": 2027
         },
         {
@@ -47,12 +47,12 @@
         {
           "id": 2,
           "text": "Switch to approved, low-smoke solid fuels for heating and ensure chimney maintenance.",
-          "consequence": "By 2030, a significant reduction in particulate matter emissions improves air quality, leading to fewer health issues related to air pollution and enhanced community well-being.",
+          "consequence": "By 2030, a noticeable decrease in particulate matter emissions contributes to improved air quality, potentially resulting in fewer health issues related to air pollution and potentially enhancing community well-being.",
           "futureYear": 2030
         },
         {
           "id": 3,
-          "text": "Participate in illegal trade of high-smoke fuels to save on costs.",
+          "text": "Participate in the trade of high-smoke fuels to save on costs.",
           "consequence": "By 2026, engagement in the illegal fuel trade undermines efforts to improve air quality, harming local businesses and contributing to a rise in pollution-related illnesses.",
           "futureYear": 2026
         },
@@ -91,7 +91,7 @@
         {
           "id": 4,
           "text": "Advocate for green infrastructure projects, like more urban trees and green spaces.",
-          "consequence": "By 2030, Cork sees a greener urban landscape that not only beautifies the city but also acts as a natural air filter, significantly lowering pollution levels.",
+          "consequence": "By 2030, Cork blossoms into a vibrant urban oasis, adorned with lush greenery that not only enhances the city's aesthetic charm but also serves as a powerful natural air purifier, substantially reducing pollution levels.",
           "futureYear": 2030
         }
       ]
@@ -105,7 +105,7 @@
         {
           "id": 1,
           "text": "Use of solid fuels for home heating",
-          "consequence": "By 2030, burning solid fuels significantly increases air pollution, especially during winter months, leading to greater health issues related to air quality.",
+          "consequence": "By 2030, the relentless burning of solid fuels substantially exacerbates air pollution, particularly during the winter months, resulting in heightened health crises stemming from deteriorating air quality.",
           "futureYear": 2030
         },
         {
@@ -137,7 +137,7 @@
         {
           "id": 1,
           "text": "Continue using high smoke coal for heating, disregarding the council's warnings.",
-          "consequence": "By 2025, persistent use of high smoke coal exacerbates air pollution, leading to increased health issues among the population, including higher rates of respiratory conditions.",
+          "consequence": "By 2025, relentless utilization of high smoke coal worsens air pollution, resulting in heightened health issues among the populace, including escalated rates of respiratory conditions, casting a grim shadow over the future.",
           "futureYear": 2025
         },
         {
@@ -149,7 +149,7 @@
         {
           "id": 3,
           "text": "Invest in renewable heating solutions, moving away from solid fuels entirely.",
-          "consequence": "By 2030, a major shift towards renewable heating sources dramatically cuts air pollution levels, setting a standard for clean energy use in urban areas.",
+          "consequence": "By 2030, a remarkable transition to renewable heating sources significantly reduces air pollution levels, establishing a groundbreaking standard for the widespread adoption of clean energy in urban areas.",
           "futureYear": 2030
         },
         {
