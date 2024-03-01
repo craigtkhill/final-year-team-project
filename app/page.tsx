@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 // Components
 import Button from "@/components/Button";
+import { useQuizStore } from "@/utils/store";
 
 export default function Home() {
   const router = useRouter();
 
   const handleButtonClick = () => {
+    useQuizStore.setState({ count: 0 });
     router.push("/quiz");
   };
 
