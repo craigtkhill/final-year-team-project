@@ -113,7 +113,7 @@
     "link": "https://www.who.int/news-room/spotlight/how-air-pollution-is-destroying-our-health"
   },
   {
-    "question": "Which pollutant is one of the largest contributors to global warming?",
+    "question": "Which PM2.5 pollutant is one of the largest contributors to global warming?",
     "incorrect_answers": ["Carbon dioxide", "Methane", "Sulfur dioxide"],
     "correct_answer": "Black carbon",
     "explanation": "Black carbon, a component of fine particulate matter, is one of the largest contributors to global warming. It is produced through the incomplete combustion of fossil fuels, biofuels, and biomass, with primary sources including diesel engines, cookstoves, wood burning, and forest fires.",
