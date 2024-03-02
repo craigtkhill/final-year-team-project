@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { useBadgeStore } from "@/utils/store";
+import { useBadgeStore, useQuizStore } from "@/utils/store";
 import { useCharacterStore } from "@/utils/store";
 import { useRouter } from "next/navigation";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -17,6 +17,7 @@ const EndScreen = () => {
   const router = useRouter();
 
   const goToQuizMode = () => {
+    useQuizStore.setState({ count: 0 });
     router.push("/quiz");
   };
 

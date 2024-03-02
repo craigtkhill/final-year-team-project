@@ -3,13 +3,15 @@
     "question": "Welcome to Eironauts! What is our mission?",
     "incorrect_answers": ["To defeat enemies"],
     "correct_answer": "To tackle air pollution through knowledge and action",
-    "explanation": "As an Eironaut, your mission is to tackle air pollution by increasing your knowledge on the topic of air pollution and taking informed actions."
+    "explanation": "As an Eironaut, your mission is to tackle air pollution by increasing your knowledge on the topic of air pollution and taking informed actions.",
+    "link": ""
   },
   {
     "question": "What happens after completing the quiz?",
     "incorrect_answers": ["You win a prize", "The game ends"],
     "correct_answer": "You embark on an adventure",
-    "explanation": "After the quiz, if you get a high enough score (10/15), you'll start an adventure influenced by real-time news articles. Your decisions will impact the future of your community."
+    "explanation": "After the quiz, if you get a high enough score (10/15), you'll start an adventure influenced by real-time news articles. Your decisions will impact the future of your community.",
+    "link": ""
   },
   {
     "question": "What is the main goal of Eironauts?",
@@ -19,19 +21,22 @@
       "To defeat the final boss"
     ],
     "correct_answer": "To empower players to take action against air pollution",
-    "explanation": "Eironauts aims to empower players to take action against air pollution by providing knowledge and tools to make informed decisions."
+    "explanation": "Eironauts aims to empower players to take action against air pollution by providing knowledge and tools to make informed decisions.",
+    "link": ""
   },
   {
     "question": "In the context of global environmental pollution, according to the World Health Organization (WHO), from which environmental medium are the majority of the most hazardous pollutants to human health primarily released?",
     "incorrect_answers": ["Soil", "Water", "Noise"],
     "correct_answer": "Air",
-    "explanation": "Outdoor air pollution from industrial activities, vehicles, and burning biomass, along with indoor pollution from the use of solid fuels for cooking and heating, contribute to a wide range of health issues. These include respiratory infections, heart disease, stroke, and lung cancer. Despite the risks posed by soil and water pollution through substances like heavy metals and pathogens, air pollution's extensive impact on various health outcomes marks it as the most significant environmental threat to human health."
+    "explanation": "Outdoor air pollution from industrial activities, vehicles, and burning biomass, along with indoor pollution from the use of solid fuels for cooking and heating, contribute to a wide range of health issues. These include respiratory infections, heart disease, stroke, and lung cancer. Despite the risks posed by soil and water pollution through substances like heavy metals and pathogens, air pollution's extensive impact on various health outcomes marks it as the most significant environmental threat to human health.",
+    "link": "https://www.who.int/health-topics/air-pollution#tab=tab_1"
   },
   {
     "question": "What percentage of people breathe polluted air worldwide?",
     "incorrect_answers": ["95%", "85%", "75%"],
     "correct_answer": "99%",
-    "explanation": "99% of the world's population breathes air that exceeds WHO guideline limits containing high levels of pollutants."
+    "explanation": "99% of the world's population breathes air that exceeds WHO guideline limits containing high levels of pollutants.",
+    "link": "https://www.who.int/health-topics/air-pollution#tab=tab_1"
   },
   {
     "question": "For city planners aiming to reduce urban air pollution, which strategy is essential for mitigating environmental health risks?",
@@ -41,7 +46,8 @@
       "Promoting the use of traditional fossil fuel vehicles to boost economic growth"
     ],
     "correct_answer": "Developing integrated public transportation systems and promoting green urban areas",
-    "explanation": "Developing integrated public transportation systems can significantly reduce reliance on personal vehicles, thereby decreasing vehicular emissions, one of the primary sources of urban air pollution. Promoting green urban areas, including parks and green roofs, can improve air quality by filtering pollutants and providing cleaner air."
+    "explanation": "Developing integrated public transportation systems can significantly reduce reliance on personal vehicles, thereby decreasing vehicular emissions, one of the primary sources of urban air pollution. Promoting green urban areas, including parks and green roofs, can improve air quality by filtering pollutants and providing cleaner air.",
+    "link": "https://www.unep.org/explore-topics/resource-efficiency/what-we-do/cities/sustainable-transport-and-air-pollution"
   },
   {
     "question": "What does PM mean in the context of air pollution?",
@@ -51,13 +57,15 @@
       "Private Message"
     ],
     "correct_answer": "Particulate Matter",
-    "explanation": "Particulate matter consists of tiny airborne particles and droplets that can be inhaled, posing significant health risks. It's categorized by size: PM10 (particles up to 10 micrometers) which includes dust, pollen, and mold, and PM2.5 (particles up to 2.5 micrometers), produced from combustion processes like vehicle emissions and industrial activities. PM2.5 is particularly hazardous as it can penetrate deep into the lungs and bloodstream, leading to respiratory and cardiovascular issues, and with long-term exposure, chronic diseases such as asthma and heart disease."
+    "explanation": "Particulate matter consists of tiny airborne particles and droplets that can be inhaled, posing significant health risks. It's categorized by size: PM10 (particles up to 10 micrometers) which includes dust, pollen, and mold, and PM2.5 (particles up to 2.5 micrometers), produced from combustion processes like vehicle emissions and industrial activities. PM2.5 is particularly hazardous as it can penetrate deep into the lungs and bloodstream, leading to respiratory and cardiovascular issues, and with long-term exposure, chronic diseases such as asthma and heart disease.",
+    "link": "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics"
   },
   {
     "question": "Which pollutant can penetrate our body's protective barriers to cause damage to our lungs, heart, and brain?",
     "incorrect_answers": ["PM10", "CO2", "NOx"],
     "correct_answer": "PM2.5",
-    "explanation": "PM2.5 is so tiny that it can pass through mucus membranes and other barriers to damage our lungs, heart, and brain."
+    "explanation": "PM2.5 is so tiny that it can pass through mucus membranes and other barriers to damage our lungs, heart, and brain.",
+    "link": "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics"
   },
 
   {
@@ -68,7 +76,8 @@
       "By creating more open space for pollutants to accumulate"
     ],
     "correct_answer": "By reducing the number of plants and trees that absorb carbon dioxide",
-    "explanation": "Deforestation contributes to air pollution by reducing the number of plants and trees that can absorb carbon dioxide."
+    "explanation": "Deforestation contributes to air pollution by reducing the number of plants and trees that can absorb carbon dioxide.",
+    "link": "https://sciencing.com/deforestation-affect-air-10632.html"
   },
   {
     "question": "What are the primary causes of outdoor air pollution in Irish Cities during winter?",
@@ -78,7 +87,8 @@
       "Natural sources"
     ],
     "correct_answer": "Solid fuel burning and traffic",
-    "explanation": "Solid fuel burning in winter and traffic in cities are the primary causes of outdoor air pollution in Irish cities, according to the EPA report 2021."
+    "explanation": "Solid fuel burning in winter and traffic in cities are the primary causes of outdoor air pollution in Irish cities, according to the EPA report 2021.",
+    "link": "https://www.epa.ie/publications/monitoring--assessment/air/air-quality-in-ireland-2021.php"
   },
   {
     "question": "In the EPA (Environmental Protection Agency) 2021 air quality report, how did the pollutant levels in Ireland compare to the WHO (World Health Organization) air quality guidelines?",
@@ -88,7 +98,8 @@
       "Only some pollutants exceeded the guidelines"
     ],
     "correct_answer": "All pollutant levels exceeded the WHO air quality guidelines",
-    "explanation": "In the EPA 2021 air quality report, all pollutant levels in Ireland exceeded the WHO air quality guidelines. The WHO Air Quality Guidelines (AQGs) are designed to protect public health by offering recommendations for limiting levels of key air pollutants. Updated in 2021, these guidelines provide new, lower threshold values for pollutants based on recent scientific evidence showing the adverse health effects of air pollution at lower concentrations than previously understood. The pollutants covered include particulate matter (PM2.5 and PM10), ozone (O3), nitrogen dioxide (NO2), sulfur dioxide (SO2), and carbon monoxide (CO). The aim is to assist governments and organizations in establishing legal standards and effective measures for reducing emissions and concentrations of these pollutants to improve public health"
+    "explanation": "In the EPA 2021 air quality report, all pollutant levels in Ireland exceeded the WHO air quality guidelines. The WHO Air Quality Guidelines (AQGs) are designed to protect public health by offering recommendations for limiting levels of key air pollutants. Updated in 2021, these guidelines provide new, lower threshold values for pollutants based on recent scientific evidence showing the adverse health effects of air pollution at lower concentrations than previously understood. The pollutants covered include particulate matter (PM2.5 and PM10), ozone (O3), nitrogen dioxide (NO2), sulfur dioxide (SO2), and carbon monoxide (CO). The aim is to assist governments and organizations in establishing legal standards and effective measures for reducing emissions and concentrations of these pollutants to improve public health",
+    "link": "https://www.epa.ie/publications/monitoring--assessment/air/air-quality-in-ireland-2021.php"
   },
   {
     "question": "Air pollution affect everyone's health equally",
@@ -98,13 +109,15 @@
       "It only affects outdoor workers"
     ],
     "correct_answer": "False",
-    "explanation": "While air pollution is harmful to everyone, children, older people, and pregnant women are more susceptible to air pollution-related diseases."
+    "explanation": "While air pollution is harmful to everyone, children, older people, and pregnant women are more susceptible to air pollution-related diseases.",
+    "link": "https://www.who.int/news-room/spotlight/how-air-pollution-is-destroying-our-health"
   },
   {
     "question": "Which pollutant is one of the largest contributors to global warming?",
     "incorrect_answers": ["Carbon dioxide", "Methane", "Sulfur dioxide"],
     "correct_answer": "Black carbon",
-    "explanation": "Black carbon, a component of fine particulate matter, is one of the largest contributors to global warming. It is produced through the incomplete combustion of fossil fuels, biofuels, and biomass, with primary sources including diesel engines, cookstoves, wood burning, and forest fires. "
+    "explanation": "Black carbon, a component of fine particulate matter, is one of the largest contributors to global warming. It is produced through the incomplete combustion of fossil fuels, biofuels, and biomass, with primary sources including diesel engines, cookstoves, wood burning, and forest fires.",
+    "link": "https://www.ccacoalition.org/short-lived-climate-pollutants/black-carbon"
   },
   {
     "question": "Have any communities in Ireland developed a clean air strategy?",
@@ -114,7 +127,8 @@
       "It is under development in all communities"
     ],
     "correct_answer": "Cork City is the only local authority to have a clean air strategy",
-    "explanation": "Cork City is the only local authority to have developed a clean air strategy, providing a policy framework for promoting clean air."
+    "explanation": "Cork City is the only local authority to have developed a clean air strategy, providing a policy framework for promoting clean air.",
+    "link": "https://www.corkcity.ie/en/council-services/services/environment/air-quality/air-quality-strategy.html"
   },
   {
     "question": "Are the health impacts of air pollution limited to respiratory diseases, heart diseases, and lung cancer?",
@@ -124,6 +138,7 @@
       "Only includes respiratory diseases"
     ],
     "correct_answer": "False",
-    "explanation": "Studies have linked higher concentrations of NO2, PM2.5, and PM10 to between 12%-53% higher risk of poor mental wellbeing, indicating that air pollution's health impacts are not limited to physical health but also include neurological or mental health."
+    "explanation": "Studies have linked higher concentrations of NO2, PM2.5, and PM10 to between 12%-53% higher risk of poor mental wellbeing, indicating that air pollution's health impacts are not limited to physical health but also include neurological or mental health.",
+    "link": "https://www.who.int/news-room/spotlight/how-air-pollution-is-destroying-our-health"
   }
 ]

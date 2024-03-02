@@ -9,6 +9,7 @@ import QuestionCard from "@/components/QuestionCard/QuestionCard";
 
 // Types
 import type { QuestionState } from "@/types/quiz";
+import Link from "next/link";
 
 type Props = {
   questions: Array<QuestionState>;
@@ -104,6 +105,19 @@ const Quiz = ({ questions, totalQuestions, dynamicDifficulty }: Props) => {
           <div className="mt-4 p-4 bg-green-100 border-l-4 border-[#55ac78] text-[#55ac78] w-full max-w-md mx-auto">
             <p className="font-semibold">Explanation:</p>
             <p>{questions[currentQuestionIndex].explanation}</p>
+            {/* provide a link to learn more */}
+            {questions[currentQuestionIndex].link && (
+              // link needs to be styled like a button
+              <button className="mt-4 bg-[#55ac78] text-white py-2 px-4 rounded-lg transition duration-300">
+                <Link
+                  className="text-white font-semibold"
+                  href={questions[currentQuestionIndex].link}
+                  target="_blank"
+                >
+                  Learn more
+                </Link>
+              </button>
+            )}
           </div>
         </div>
       )}
