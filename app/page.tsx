@@ -30,7 +30,7 @@ export default function Home() {
           pollution and improving air quality. We’d like your help on our
           mission! In this game, the aim is to develop your knowledge and
           awareness of air pollution. To join us as a fellow Eironaut, however,
-          you must first pass the quiz!{"\n"}
+          you must first pass the quiz!{"\n\n"}
         </p>
 
         <p>
