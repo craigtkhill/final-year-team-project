@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const DynamicDifficulty = ({ children }: { children: React.ReactNode }) => {
-  const [isDynamicDifficultyOn, setDynamicDifficulty] = useState(true);
+  const [isDynamicDifficultyOn, setDynamicDifficulty] = useState(false);
   const router = useRouter();
 
   const handleToggle = () => {
@@ -21,7 +21,7 @@ const DynamicDifficulty = ({ children }: { children: React.ReactNode }) => {
     <div className="p-6 max-w-sm w-full bg-white rounded-lg border border-gray-200 shadow-md flex flex-col items-center">
       <div className="mb-4 text-center">
         <span className="text-gray-700 text-sm">{children}</span>
-        <p className="text-gray-700 text-md mt-2 font-bold">
+        <p className="text-gray-700 text-md mt-4 font-bold">
           Toggle Quiz Difficulty:
         </p>
       </div>
@@ -62,7 +62,7 @@ const DynamicDifficulty = ({ children }: { children: React.ReactNode }) => {
       </div>
       <button
         onClick={handleDecision}
-        className="py-2 px-4 rounded bg-[#55ac78] text-white"
+        className="py-2 px-4 rounded bg-[#55ac78] text-white mt-8"
       >
         Retry Quiz
       </button>

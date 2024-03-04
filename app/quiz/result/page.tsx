@@ -22,7 +22,7 @@ const Results = () => {
         <p className="text-xl my-4 text-gray-600">
           Your score: {score} / {totalQuestions}
         </p>
-        {score > (passingScore ?? 0) ? (
+        {score >= (passingScore ?? 0) ? (
           <Button
             onClick={handleDecision}
             className="text-white font-bold py-2 px-4 rounded"
