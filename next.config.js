@@ -2,8 +2,7 @@
 const nextConfig = {
   images: {
     // Domains that are allowed to be used with next/image
-    // Remove the line below when using your own image domains
-    domains: ["rickandmortyapi.com"],
+    domains: ["iris.ucc.ie", "pbs.twimg.com"],
   },
 };
 

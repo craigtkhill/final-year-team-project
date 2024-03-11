@@ -150,6 +150,14 @@ const LocationData = ({ location }: { location: string }) => {
               {choice.text}
             </button>
           ))}
+          {/* put a secrect button here that's invisible to the thank-you page */}
+          <button
+            onClick={() => router.push("/thank-you")}
+            className="w-96 h-14 hover:bg-green-700"
+          >
+            {" "}
+            {/* make button invisible */}
+          </button>
         </div>
       </div>
       {selectedChoice && (
