@@ -1,5 +1,9 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const Confetti = dynamic(() => import("react-confetti"), { ssr: false });
 
 const supervisors = [
   {
@@ -25,7 +29,11 @@ const supervisors = [
 const ThankYouPage = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-4xl text-center mt-8">
+      <Confetti
+        width={typeof window !== "undefined" ? window.innerWidth : 0}
+        height={typeof window !== "undefined" ? window.innerHeight : 0}
+      />
+      <h1 className="text-8xl text-center mt-8">
         Thank you to our supervisors!
       </h1>
       <div className="flex flex-row items-center justify-center">
@@ -43,16 +51,7 @@ const ThankYouPage = () => {
             </p>
           </div>
         ))}
-        <div
-          style={{
-            height: "100vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        ></div>
       </div>
-      {/*  it should take up a full height of the screen and be centered and justified vertically */}
       <div className="flex flex-col items-center justify-center h-screen">
         <h1 className="text-8xl text-center">Questions?</h1>
       </div>
