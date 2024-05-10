@@ -42,7 +42,7 @@ export default function Home() {
       </p>
       {/* <Image className="w-24 h-24" src="/logo.svg" alt="Logo" /> */}
       <Button onClick={handleButtonClick} bgColor="#55ac78">
-        #55ac78 Start Quiz
+        Start Quiz
       </Button>
       <p className="text-center text-sm w-full max-w-sm text-justify">
         <em>
