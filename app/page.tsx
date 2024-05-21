@@ -15,7 +15,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen space-y-8 px-4">
+    <div className="flex flex-col items-center justify-center h-screen space-y-6 px-4">
       <LogoCarousel />
       <p className="text-4xl font-bold text-center">Welcome to Eironauts!</p>
       <p className="text-xl text-center w-full max-w-md text-justify">

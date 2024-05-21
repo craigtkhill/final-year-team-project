@@ -1,6 +1,11 @@
 .carouselWrapper {
-  position: relative;
+  position: fixed;
   background-color: #fff;
+  margin-left: 0;
+  margin-right: 0;
+  /* place on top of screen */
+  /* not z index */
+  top: 0;
 }
 
 .carouselWrapper::before,
@@ -11,4 +16,13 @@
   bottom: 0;
   width: 50px;
   z-index: 10;
+  background: #fff;
+}
+
+.carouselWrapper::before {
+  left: -50px; /* Adjust to extend the background */
+}
+
+.carouselWrapper::after {
+  right: -50px; /* Adjust to extend the background */
 }
