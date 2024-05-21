@@ -39,10 +39,6 @@ lerna-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Tailwind CSS
-*.css
-*.css.map
-
 # Optional npm cache directory
 .npm
 
