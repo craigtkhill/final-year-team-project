@@ -1,9 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 // Components
 import Button from "@/components/Button";
+import LogoCarousel from "@/components/LogoCarousel/LogoCarousel";
 import { useQuizStore } from "@/utils/store";
 
 export default function Home() {
@@ -16,13 +16,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen space-y-8 px-4">
-      {/* <Image
-        src="/characters/char1.png"
-        width={100}
-        height={100}
-        alt="Character"
-      /> */}
-
+      <LogoCarousel />
       <p className="text-4xl font-bold text-center">Welcome to Eironauts!</p>
       <p className="text-xl text-center w-full max-w-md text-justify">
         <p>
@@ -43,7 +37,6 @@ export default function Home() {
           below to begin the quiz!
         </p>
       </p>
-      {/* <Image className="w-24 h-24" src="/logo.svg" alt="Logo" /> */}
       <Button onClick={handleButtonClick} bgColor="#55ac78">
         Start Quiz
       </Button>
