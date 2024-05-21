@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+bun.lockb
 
 # testing
 /coverage
@@ -24,9 +25,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
@@ -34,3 +38,29 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Tailwind CSS
+*.css
+*.css.map
+
+# Optional npm cache directory
+.npm
+
+# Parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# Temporary files
+tmp/
+temp/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Custom configurations
+custom_config/
