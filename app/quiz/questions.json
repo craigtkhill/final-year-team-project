@@ -52,7 +52,7 @@
   {
     "question": "Particulate Matter (also called PM) is a particle (solid) air pollutant mainly produced by solid fuel burning. PM particles are very small. How many times smaller than a human hair is PM?",
     "incorrect_answers": ["1 times smaller", "100 times smaller"],
-    "correct_answer": ["5 times smaller", "20 times smaller"],
+    "correct_answer": "5 times smaller and 20 times smaller",
     "explanation": "The size of PM depends on the width of the particle, which is measured in microns (1 metre = 1 million microns). A human hair is around 50-70 microns in width. PM10 (particles up to 10 micrometers) which includes dust, pollen, and mold, and PM2.5 (particles up to 2.5 micrometers), produced from combustion processes.",
     "link": "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics "
   },
@@ -70,10 +70,7 @@
       "Supporting better building energy efficiency through home retrofits",
       "Wearing masks when the air quality is poor"
     ],
-    "correct_answer": [
-      "Reducing the use of motor cars for short journeys in our cities",
-      "Avoiding engine idling when parked outside buildings"
-    ],
+    "correct_answer": "Reducing the use of motor cars for short journeys in our cities and Avoiding engine idling when parked outside buildings",
     "explanation": "Reducing the use of motor cars and avoiding engine idling are two key actions to limit levels of NO2, as this is mainly caused by car fumes and emissions. Home retrofits are very important to make homes warmer and rely less on solid fuel burning for home heating. Wearing masks is a good way to protect yourself from dirty air, but it does not help to reduce air pollution.",
     "link": "https://www.epa.ie/our-services/monitoring--assessment/assessment/irelands-environment/air/ "
   },
@@ -128,5 +125,12 @@
     "correct_answer": "All of these options",
     "explanation": "Air pollution is the single largest environmental health risk in Europe and other parts of the world. It can affect multiple health issues and contribute to premature mortality. Taking actions that reduce air pollution, no matter how big or small, is important to promote health and wellbeing in our communities.",
     "link": "https://www.eea.europa.eu/en/topics/in-depth/air-pollution/eow-it-affects-our-health "
+  },
+  {
+    "question": "What is the main source of air pollution in Ireland?",
+    "incorrect_answers": ["Agriculture", "Industry", "Transport"],
+    "correct_answer": "Transport",
+    "explanation": "Transport is the main source of air pollution in Ireland, contributing to 33% of the total emissions of nitrogen oxides (NOx) and 12% of the total emissions of particulate matter (PM2.5).",
+    "link": "https://www.epa.ie/publications/monitoring--assessment/air/air-quality-in-ireland-2022.php"
   }
 ]

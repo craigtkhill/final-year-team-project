@@ -12,7 +12,31 @@ const Results = () => {
   const passingScore = useQuizStore((state) => state.passingScore);
 
   const handleDecision = () => {
-    router.push("/character");
+    router.push("/quiz");
+  };
+
+  const handleShare = () => {
+    const link = "https://www.eironauts.vercel.app/";
+
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "Eironauts",
+          text: "Check out Eironauts!",
+          url: link,
+        })
+        .then(() => console.log("Successful share"))
+        .catch((error) => console.log("Error sharing", error));
+    } else {
+      navigator.clipboard
+        .writeText(link)
+        .then(() => {
+          alert("Link copied to clipboard!");
+        })
+        .catch((error) => {
+          console.error("Error copying link to clipboard", error);
+        });
+    }
   };
 
   return (
@@ -20,16 +44,26 @@ const Results = () => {
       <div className="text-center p-4 shadow-md rounded-lg max-w-sm mx-auto bg-white">
         <h1 className="text-2xl font-bold text-gray-800">Quiz Results</h1>
         <p className="text-xl my-4 text-gray-600">
+          Well done! You have passed the first challenge and can now join the
+          Eironauts for the next adventure!
+        </p>
+        <p className="text-xl my-4 text-gray-600">
           Your score: {score} / {totalQuestions}
         </p>
         {score >= (passingScore ?? 0) ? (
-          <Button
-            onClick={handleDecision}
-            className="text-white font-bold py-2 px-4 rounded"
-            bgColor="#55ac78"
-          >
-            Choose Your Character
-          </Button>
+          // create space between the buttons
+          <div className="flex flex-col space-y-4">
+            <Button
+              onClick={handleDecision}
+              className="text-white font-bold py-2 px-4 rounded"
+              bgColor="#55ac78"
+            >
+              Restart Quiz
+            </Button>
+            <Button onClick={handleShare} bgColor="#3b5998">
+              Share Quiz
+            </Button>
+          </div>
         ) : (
           <div className="my-4 p-4 bg-gray-50 rounded">
             <DynamicDifficulty>
