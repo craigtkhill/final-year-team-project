@@ -1,0 +1,14 @@
+.carouselWrapper {
+  position: relative;
+  background-color: #fff;
+}
+
+.carouselWrapper::before,
+.carouselWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 10;
+}
