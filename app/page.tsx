@@ -28,9 +28,12 @@ export default function Home() {
         <p>
           The Eironauts are a force for good; we are all about reducing air
           pollution and improving air quality. We’d like your help on our
-          mission! In this game, the aim is to develop your knowledge and
-          awareness of air pollution. To join us as a fellow Eironaut, however,
-          you must first pass the quiz!{"\n\n"}
+          mission!{"\n\n"}
+        </p>
+        <p>
+          In this game, the aim is to develop your knowledge and awareness of
+          air pollution. To join us as a fellow Eironaut, however, you must
+          first pass the quiz!{"\n\n"}
         </p>
 
         <p>
@@ -46,15 +49,19 @@ export default function Home() {
       </Button>
       <p className="text-center text-sm w-full max-w-sm text-justify">
         <em>
-          Eironauts is a project conducted at UCC School of Applied Psychology
-          in collaboration with the UCC SFI-funded project{" "}
+          Eirnauts is a game created by Craig Hill, Benjaimin McManus, Kellie O
+          Donovan and Ciara O&apos;Riordan as part of their Final Year Project
+          in Psychology and Computing at University College Cork. The game was
+          developed in collaboration with the project{" "}
           <Link
             className="text-blue-500 hover:underline"
-            href="https://twitter.com/BehaviAir"
+            href="https://behaviair.org/"
             target="_blank"
           >
-            BEHAV-I-AIR
+            BehaviAir (Behaviours and Impacts on Air Quality)
           </Link>
+          , which is funded by Science Foundation Ireland under the ‘Healthy
+          Environment for All’ Challenge Fund.{" "}
         </em>
       </p>
     </div>
