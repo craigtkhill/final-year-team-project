@@ -20,12 +20,12 @@
       "To reach the highest level",
       "To defeat the final boss"
     ],
-    "correct_answer": "To empower players to take action against air pollution",
+    "correct_answer": "To empower players to learn about the risks and solutions association with air pollution",
     "explanation": "Eironauts aims to empower players to take action against air pollution by providing knowledge and tools to make informed decisions.",
     "link": ""
   },
   {
-    "question": "In the context of global environmental pollution, according to the World Health Organization (WHO), from which environmental medium are the majority of the most hazardous pollutants to human health primarily released?",
+    "question": "Which of the following forms of pollution poses the highest risks for poor health or mortality?",
     "incorrect_answers": ["Soil", "Water", "Noise"],
     "correct_answer": "Air",
     "explanation": "Outdoor air pollution from industrial activities, vehicles, and burning biomass, along with indoor pollution from the use of solid fuels for cooking and heating, contribute to a wide range of health issues. These include respiratory infections, heart disease, stroke, and lung cancer. Despite the risks posed by soil and water pollution through substances like heavy metals and pathogens, air pollution's extensive impact on various health outcomes marks it as the most significant environmental threat to human health.",
@@ -39,67 +39,55 @@
     "link": "https://www.who.int/health-topics/air-pollution#tab=tab_1"
   },
   {
-    "question": "For city planners aiming to reduce urban air pollution, which strategy is essential for mitigating environmental health risks?",
+    "question": "Which of the following day-to-day activities contribute the most to air pollution in Ireland, especially during wintertime?",
     "incorrect_answers": [
-      "Expanding urban road networks to reduce traffic congestion",
-      "Reducing green spaces in urban areas to accommodate more housing",
-      "Promoting the use of traditional fossil fuel vehicles to boost economic growth"
+      "Travelling short distances by motor engine car",
+      "Engine idling when parked outside schools, hospitals or other buildings",
+      "Burning solid fuel (coal, turf, wood) for home heating"
     ],
-    "correct_answer": "Developing integrated public transportation systems and promoting green urban areas",
-    "explanation": "Developing integrated public transportation systems can significantly reduce reliance on personal vehicles, thereby decreasing vehicular emissions, one of the primary sources of urban air pollution. Promoting green urban areas, including parks and green roofs, can improve air quality by filtering pollutants and providing cleaner air.",
-    "link": "https://www.unep.org/explore-topics/resource-efficiency/what-we-do/cities/sustainable-transport-and-air-pollution"
+    "correct_answer": "All of these options",
+    "explanation": "The Environmental Protection Agency reports and data have shown that dependence of fossil fuels for travel and burning of solid fuel for home heating are key drivers of air pollution in Ireland, which is similar to other countries in Europe and globally.” Source: EPA Air quality in Ireland 2022",
+    "link": "https://www.epa.ie/publications/monitoring--assessment/air/air-quality-in-ireland-2022.php"
   },
   {
-    "question": "What does PM mean in the context of air pollution?",
-    "incorrect_answers": [
-      "Prime Minister",
-      "Project Manager",
-      "Private Message"
-    ],
-    "correct_answer": "Particulate Matter",
-    "explanation": "Particulate matter consists of tiny airborne particles and droplets that can be inhaled, posing significant health risks. It's categorized by size: PM10 (particles up to 10 micrometers) which includes dust, pollen, and mold, and PM2.5 (particles up to 2.5 micrometers), produced from combustion processes like vehicle emissions and industrial activities. PM2.5 is particularly hazardous as it can penetrate deep into the lungs and bloodstream, leading to respiratory and cardiovascular issues, and with long-term exposure, chronic diseases such as asthma and heart disease.",
-    "link": "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics"
+    "question": "Particulate Matter (also called PM) is a particle (solid) air pollutant mainly produced by solid fuel burning. PM particles are very small. How many times smaller than a human hair is PM?",
+    "incorrect_answers": ["1 times smaller", "100 times smaller"],
+    "correct_answer": ["5 times smaller", "20 times smaller"],
+    "explanation": "The size of PM depends on the width of the particle, which is measured in microns (1 metre = 1 million microns). A human hair is around 50-70 microns in width. PM10 (particles up to 10 micrometers) which includes dust, pollen, and mold, and PM2.5 (particles up to 2.5 micrometers), produced from combustion processes.",
+    "link": "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics "
   },
   {
     "question": "Which pollutant can penetrate our body's protective barriers to cause damage to our lungs, heart, and brain?",
     "incorrect_answers": ["PM10", "CO2", "NOx"],
     "correct_answer": "PM2.5",
-    "explanation": "PM2.5 is so tiny that it can pass through mucus membranes and other barriers to damage our lungs, heart, and brain.",
+    "explanation": "PM2.5 is particularly hazardous as it can penetrate deep into the lungs and bloodstream, leading to respiratory and cardiovascular issues, and with long-term exposure, chronic diseases such as asthma and heart disease.",
     "link": "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics"
   },
 
   {
-    "question": "How does deforestation contribute to air pollution?",
+    "question": "Nitrogen dioxide (NO2) is a poisonous gas that can cause asthma, respiratory infections, and even poor cognitive health. Which of the following actions is the most effective to reduce NO2 levels and protect health?",
     "incorrect_answers": [
-      "By releasing harmful gasses directly into the atmosphere",
-      "By increasing industrial emissions",
-      "By creating more open space for pollutants to accumulate"
+      "Supporting better building energy efficiency through home retrofits",
+      "Wearing masks when the air quality is poor"
     ],
-    "correct_answer": "By reducing the number of plants and trees that absorb carbon dioxide",
-    "explanation": "Deforestation contributes to air pollution by reducing the number of plants and trees that can absorb carbon dioxide.",
-    "link": "https://sciencing.com/deforestation-affect-air-10632.html"
+    "correct_answer": [
+      "Reducing the use of motor cars for short journeys in our cities",
+      "Avoiding engine idling when parked outside buildings"
+    ],
+    "explanation": "Reducing the use of motor cars and avoiding engine idling are two key actions to limit levels of NO2, as this is mainly caused by car fumes and emissions. Home retrofits are very important to make homes warmer and rely less on solid fuel burning for home heating. Wearing masks is a good way to protect yourself from dirty air, but it does not help to reduce air pollution.",
+    "link": "https://www.epa.ie/our-services/monitoring--assessment/assessment/irelands-environment/air/ "
   },
+
   {
-    "question": "What are the primary causes of outdoor air pollution in Irish Cities during winter?",
+    "question": "Why are plants and green spaces important for clean air?",
     "incorrect_answers": [
-      "Industrial emissions",
-      "Agricultural activities",
-      "Natural sources"
+      "They lower the ground temperature and keep the air cool",
+      "They use solar energy to grow",
+      "They increase biodiversity"
     ],
-    "correct_answer": "Solid fuel burning and traffic",
-    "explanation": "Solid fuel burning in winter and traffic in cities are the primary causes of outdoor air pollution in Irish cities, according to the EPA report 2021.",
-    "link": "https://www.epa.ie/publications/monitoring--assessment/air/air-quality-in-ireland-2021.php"
-  },
-  {
-    "question": "In the EPA (Environmental Protection Agency) 2021 air quality report, how did the pollutant levels in Ireland compare to the WHO (World Health Organization) air quality guidelines?",
-    "incorrect_answers": [
-      "Below the guidelines",
-      "Within the guidelines",
-      "Only some pollutants exceeded the guidelines"
-    ],
-    "correct_answer": "All pollutant levels exceeded the WHO air quality guidelines",
-    "explanation": "In the EPA 2021 air quality report, all pollutant levels in Ireland exceeded the WHO air quality guidelines. The WHO Air Quality Guidelines (AQGs) are designed to protect public health by offering recommendations for limiting levels of key air pollutants. Updated in 2021, these guidelines provide new, lower threshold values for pollutants based on recent scientific evidence showing the adverse health effects of air pollution at lower concentrations than previously understood. The pollutants covered include particulate matter (PM2.5 and PM10), ozone (O3), nitrogen dioxide (NO2), sulfur dioxide (SO2), and carbon monoxide (CO). The aim is to assist governments and organizations in establishing legal standards and effective measures for reducing emissions and concentrations of these pollutants to improve public health",
-    "link": "https://www.epa.ie/publications/monitoring--assessment/air/air-quality-in-ireland-2021.php"
+    "correct_answer": "They absorb and trap pollutants from the surrounding air",
+    "explanation": "Plants absorb and digest gas pollutants such as NO2 as a nutrient. Solid pollutants such as PM stick to the tree leaves and trunk and are then washed away by rain. The other options are all true about plants, although they contribute less (or not at all) to keep the air clean.",
+    "link": "https://earth.org/unveiling-plants-hidden-air-quality-role/"
   },
   {
     "question": "Air pollution affects everyone's health equally",
@@ -113,7 +101,7 @@
     "link": "https://www.who.int/news-room/spotlight/how-air-pollution-is-destroying-our-health"
   },
   {
-    "question": "Which PM2.5 pollutant is one of the largest contributors to global warming?",
+    "question": "Which type of particulate matter is one of the largest contributors to global warming?",
     "incorrect_answers": ["Carbon dioxide", "Methane", "Sulfur dioxide"],
     "correct_answer": "Black carbon",
     "explanation": "Black carbon, a component of fine particulate matter, is one of the largest contributors to global warming. It is produced through the incomplete combustion of fossil fuels, biofuels, and biomass, with primary sources including diesel engines, cookstoves, wood burning, and forest fires.",
@@ -131,14 +119,14 @@
     "link": "https://www.corkcity.ie/en/council-services/services/environment/air-quality/air-quality-strategy.html"
   },
   {
-    "question": "Are the health impacts of air pollution limited to respiratory diseases, heart diseases, and lung cancer?",
+    "question": "What health diseases can we prevent by reducing air pollution in our communities?",
     "incorrect_answers": [
-      "True",
-      "Only includes respiratory and heart diseases",
-      "Only includes respiratory diseases"
+      "Respiratory diseases",
+      "Heart diseases and cancer",
+      "Neurological and mental disorders"
     ],
-    "correct_answer": "False",
-    "explanation": "Studies have linked higher concentrations of NO2, PM2.5, and PM10 to between 12%-53% higher risk of poor mental wellbeing, indicating that air pollution's health impacts are not limited to physical health but also include neurological or mental health.",
-    "link": "https://www.who.int/news-room/spotlight/how-air-pollution-is-destroying-our-health"
+    "correct_answer": "All of these options",
+    "explanation": "Air pollution is the single largest environmental health risk in Europe and other parts of the world. It can affect multiple health issues and contribute to premature mortality. Taking actions that reduce air pollution, no matter how big or small, is important to promote health and wellbeing in our communities.",
+    "link": "https://www.eea.europa.eu/en/topics/in-depth/air-pollution/eow-it-affects-our-health "
   }
 ]
