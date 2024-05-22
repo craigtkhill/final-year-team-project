@@ -18,26 +18,35 @@ const Results = () => {
 
   const handleShare = () => {
     const link = "https://www.eironauts.vercel.app/";
+    const shareData = {
+      title: "Eironauts",
+      text: "Check out Eironauts!",
+      url: link,
+    };
 
     if (navigator.share) {
       navigator
-        .share({
-          title: "Eironauts",
-          text: "Check out Eironauts!",
-          url: link,
-        })
+        .share(shareData)
         .then(() => console.log("Successful share"))
-        .catch((error) => console.log("Error sharing", error));
-    } else {
-      navigator.clipboard
-        .writeText(link)
-        .then(() => {
-          alert("Link copied to clipboard!");
-        })
         .catch((error) => {
-          console.error("Error copying link to clipboard", error);
+          console.log("Error sharing", error);
+          copyToClipboard(link);
         });
+    } else {
+      copyToClipboard(link);
     }
+  };
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        alert("Link copied to clipboard!");
+      })
+      .catch((error) => {
+        console.error("Error copying link to clipboard", error);
+        alert("Failed to copy the link. Please try again.");
+      });
   };
 
   return (
