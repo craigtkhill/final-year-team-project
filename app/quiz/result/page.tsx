@@ -12,6 +12,7 @@ const Results = () => {
   const passingScore = useQuizStore((state) => state.passingScore);
 
   const handleDecision = () => {
+    useQuizStore.setState({ count: 0 });
     router.push("/quiz");
   };
 
