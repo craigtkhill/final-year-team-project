@@ -3,9 +3,7 @@
   background-color: #fff;
   margin-left: 0;
   margin-right: 0;
-  /* place on top of screen */
-  /* not z index */
-  top: 0;
+  bottom: 0;
 }
 
 .carouselWrapper::before,
@@ -20,9 +18,9 @@
 }
 
 .carouselWrapper::before {
-  left: -50px; /* Adjust to extend the background */
+  left: -50px;
 }
 
 .carouselWrapper::after {
-  right: -50px; /* Adjust to extend the background */
+  right: -50px;
 }
