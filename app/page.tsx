@@ -42,7 +42,7 @@ export default function Home() {
       </Button>
       <p className="text-center text-sm w-full max-w-sm text-justify mt-4">
         <em>
-          Eironauts is a game created by Craig Hill, Benjaimin McManus, Kellie O
+          Eironauts is a game created by Craig Hill, Benjamin McManus, Kellie O
           Donovan and Ciara O&apos;Riordan as part of their Final Year Project
           in Psychology and Computing at University College Cork. The game was
           developed in collaboration with the project{" "}
