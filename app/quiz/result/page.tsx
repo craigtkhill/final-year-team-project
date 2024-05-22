@@ -45,7 +45,6 @@ const Results = () => {
       })
       .catch((error) => {
         console.error("Error copying link to clipboard", error);
-        alert("Failed to copy the link. Please try again.");
       });
   };
 
