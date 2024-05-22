@@ -15,10 +15,10 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen space-y-4 px-4">
+    <div className="flex flex-col items-center justify-center mt-20 mb-40  px-4">
       <LogoCarousel />
       <p className="text-4xl font-bold text-center">Welcome to Eironauts!</p>
-      <p className="text-xl text-center w-full max-w-md text-justify">
+      <p className="text-xl text-center w-full max-w-md text-justify mt-4">
         <p>
           The Eironauts are a force for good; we are all about reducing air
           pollution and improving air quality. We’d like your help on our
@@ -30,7 +30,7 @@ export default function Home() {
           first pass the quiz!{"\n\n"}
         </p>
 
-        <p>
+        <p className="mb-4">
           From there, you’ll be able to choose your character and go on a
           journey through time and see how air pollution (or improving air
           quality) could affect the world. When you’re ready, press the button
@@ -40,7 +40,7 @@ export default function Home() {
       <Button onClick={handleButtonClick} bgColor="#55ac78">
         Start Quiz
       </Button>
-      <p className="text-center text-sm w-full max-w-sm text-justify">
+      <p className="text-center text-sm w-full max-w-sm text-justify mt-4">
         <em>
           Eironauts is a game created by Craig Hill, Benjaimin McManus, Kellie O
           Donovan and Ciara O&apos;Riordan as part of their Final Year Project
