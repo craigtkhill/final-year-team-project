@@ -44,10 +44,14 @@ const Results = () => {
     <div className="flex flex-col justify-center items-center h-screen ">
       <div className="text-center p-4 shadow-md rounded-lg max-w-sm mx-auto bg-white">
         <h1 className="text-2xl font-bold text-gray-800">Quiz Results</h1>
-        <p className="text-xl my-4 text-gray-600">
-          Well done! You have passed the first challenge and can now join the
-          Eironauts for the next adventure!
-        </p>
+        {passingScore && score >= passingScore ? (
+          <p className="text-xl my-4 text-gray-600">
+            Well done! You have passed the first challenge and can now join the
+            Eironauts for the next adventure!
+          </p>
+        ) : (
+          <></>
+        )}
         <p className="text-xl my-4 text-gray-600">
           Your score: {score} / {totalQuestions}
         </p>
