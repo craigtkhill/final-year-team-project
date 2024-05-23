@@ -127,15 +127,10 @@
     "link": "https://www.eea.europa.eu/en/topics/in-depth/air-pollution/eow-it-affects-our-health "
   },
   {
-    "question": "What is the estimated range of annual global deaths attributed to air pollution from all sources?",
-    "incorrect_answers": [
-      "7000 to 9000",
-      "70,000 to 90,000",
-      "700,000 to 900,000"
-    ],
-    "correct_answer": "7 to 9 million",
-    "explanation": "The estimated range of annual deaths attributed to air pollution from all sources spans from 6.7 million to 8.8 million, according to various studies. The World Health Organization (WHO) estimates 7 million deaths per year, with 4.2 million from outdoor pollution and 3.8 million from indoor pollution. The Institute for Health Metrics and Evaluation (IHME) estimates 6.7 million deaths, with 4.5 million from outdoor pollution and 2.3 million from indoor pollution. Lelieveld et al. (2019) provides a higher estimate of 8.8 million deaths from all sources of air pollution, including 5.5 million from anthropogenic sources and 3.6 million from burning fossil fuels. Another study by Lelieveld et al. (2015) estimates 3.3 million deaths due to outdoor air pollution. Vohra et al. (2021) estimate 8.7 million deaths due to air pollution from burning fossil fuels alone.",
-
-    "link": "https://ourworldindata.org/data-review-air-pollution-deaths"
+    "question": "What is the estimated number of annual premature deaths attributed to air pollution in Ireland?",
+    "incorrect_answers": ["130-140", "13-14", "13,000-14,000"],
+    "correct_answer": "1,300-1,400",
+    "explanation": "At the moment, air pollution in Ireland is estimated to cause 1,300-1,400 premature deaths every year. This figure shows the significant impact of air pollution on public health, including its contribution to illnesses such as stroke, heart disease, lung disease, lung cancer, asthma, and dementia. The government's Clean Air Strategy aims to reduce these numbers by improving air quality through various measures, including achieving new WHO guideline values for air quality by 2040.",
+    "link": "https://www.gov.ie/en/press-release/aa501-government-approves-irelands-first-ever-clean-air-strategy/"
   }
 ]
