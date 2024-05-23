@@ -22,7 +22,7 @@ const Quiz = ({ questions, totalQuestions, dynamicDifficulty }: Props) => {
   const [userAnswers, setUserAnswers] = React.useState<Record<number, string>>(
     {}
   );
-  const isQuestionAnswered = userAnswers[currentQuestionIndex] ? true : false;
+  const isQuestionAnswered = !!userAnswers[currentQuestionIndex];
   const [latestIsCorrect, setLatestIsCorrect] = React.useState(false);
 
   const router = useRouter();
@@ -34,10 +34,14 @@ const Quiz = ({ questions, totalQuestions, dynamicDifficulty }: Props) => {
     answer: string,
     currentQuestionIndex: number
   ) => {
-    if (userAnswers[currentQuestionIndex]) return;
+    if (userAnswers[currentQuestionIndex]) {
+      return;
+    }
     const isCorrect = questions[currentQuestionIndex].correct_answer === answer;
     setLatestIsCorrect(isCorrect);
-    if (isCorrect) incrementScore();
+    if (isCorrect) {
+      incrementScore();
+    }
     setUserAnswers((prev) => ({
       ...prev,
       [currentQuestionIndex]: answer,
@@ -46,12 +50,16 @@ const Quiz = ({ questions, totalQuestions, dynamicDifficulty }: Props) => {
 
   const handleChangeQuestion = (step: number) => {
     const newQuestionIndex = currentQuestionIndex + step;
-    if (newQuestionIndex < 0 || newQuestionIndex >= totalQuestions) return;
+    if (newQuestionIndex < 0 || newQuestionIndex >= totalQuestions) {
+      return;
+    }
     setCurrentQuestionIndex(newQuestionIndex);
   };
 
   const getFilteredAnswers = (question: QuestionState) => {
-    if (!dynamicDifficulty) return question.answers;
+    if (!dynamicDifficulty) {
+      return question.answers;
+    }
 
     const correctAnswer = question.correct_answer;
     const incorrectAnswers = question.answers.filter(
