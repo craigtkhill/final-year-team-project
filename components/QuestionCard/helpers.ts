@@ -7,10 +7,12 @@ export const getBGColor = (
   if (
     (isAnswerCorrect === true && userAnswer === answer) ||
     (isAnswerCorrect === false && correctAnswer === answer)
-  )
+  ) {
     return "bg-[#55ac78] text-white";
-  if (isAnswerCorrect === false && userAnswer === answer)
+  }
+  if (isAnswerCorrect === false && userAnswer === answer) {
     return "bg-[#ac5050] text-white";
+  }
 
   return "bg-[#7F8487] text-white";
 };

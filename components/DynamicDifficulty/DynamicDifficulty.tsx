@@ -54,7 +54,7 @@ const DynamicDifficulty = ({ children }: { children: React.ReactNode }) => {
         </label>
         <span
           className={`ml-2 font-bold text-[#55ac78] ${
-            !isDynamicDifficultyOn ? "opacity-50" : "opacity-100"
+            isDynamicDifficultyOn ? "opacity-100" : "opacity-50"
           }`}
         >
           Easier
