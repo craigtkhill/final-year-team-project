@@ -85,7 +85,9 @@ const Quiz = ({ questions, totalQuestions, dynamicDifficulty }: Props) => {
       <QuestionCard
         currentQuestionIndex={currentQuestionIndex}
         question={questions[currentQuestionIndex].question}
-        answers={getFilteredAnswers(questions[currentQuestionIndex])}
+        answers={
+          getFilteredAnswers(questions[currentQuestionIndex]) as string[]
+        }
         userAnswer={userAnswers[currentQuestionIndex]}
         correctAnswer={questions[currentQuestionIndex].correct_answer}
         onClick={handleOnAnswerClick}
