@@ -37,7 +37,8 @@ const Quiz = ({ questions, totalQuestions, dynamicDifficulty }: Props) => {
     if (userAnswers[currentQuestionIndex]) {
       return;
     }
-    const isCorrect = questions[currentQuestionIndex].correct_answer === answer;
+    const isCorrect =
+      questions[currentQuestionIndex].correct_answer.includes(answer);
     setLatestIsCorrect(isCorrect);
     if (isCorrect) {
       incrementScore();
