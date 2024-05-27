@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 // Components
 import Button from "@/components/Button";
 import LogoCarousel from "@/components/LogoCarousel/LogoCarousel";
@@ -17,6 +18,12 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center mt-20 mb-40  px-4">
       <LogoCarousel />
+      <Image
+        src="/logos/eironauts-logo.png"
+        width={400}
+        height={400}
+        alt="Eironauts logo"
+      />
       <p className="text-4xl font-bold text-center">Welcome to Eironauts!</p>
       <p className="text-xl text-center w-full max-w-md text-justify mt-4">
         <p>
