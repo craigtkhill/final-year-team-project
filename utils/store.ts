@@ -1,6 +1,53 @@
 // @ts-nocheck
-import create from "zustand";
+import { create } from "zustand";
 import { persist } from "zustand/middleware";
+
+const CONFIG_ENCRYPT_STORES = false;
+
+// Helper methods for serialization and deserialization
+const StoreUtils = {
+  serializeStore: (
+    value: { version: number; state: LooseObject },
+    encrypt: boolean
+  ) => {
+    let storeState;
+    if (encrypt) {
+      storeState = {
+        version: value.version,
+        state: AppLowLevelUtils.encrypt(JSON.stringify(value.state)),
+      };
+    } else {
+      storeState = value;
+    }
+    return JSON.stringify(storeState);
+  },
+  deserializeStore: (str: string, encrypted: boolean) => {
+    const parsed = JSON.parse(str);
+    if (encrypted) {
+      parsed.state = JSON.parse(AppLowLevelUtils.decrypt(parsed.state));
+    }
+    return parsed;
+  },
+};
+
+// Custom storage object
+const storage = {
+  getItem: (name) => {
+    const item = localStorage.getItem(name);
+    return item
+      ? StoreUtils.deserializeStore(item, CONFIG_ENCRYPT_STORES)
+      : null;
+  },
+  setItem: (name, value) => {
+    localStorage.setItem(
+      name,
+      StoreUtils.serializeStore(value, CONFIG_ENCRYPT_STORES)
+    );
+  },
+  removeItem: (name) => {
+    localStorage.removeItem(name);
+  },
+};
 
 // Define the QuizScoreStore type
 export type QuizScoreStore = {
@@ -44,8 +91,9 @@ export const useQuizStore = create<QuizScoreStore>(
         set({ dynamicDifficulty }),
     }),
     {
-      name: "quiz-score-store", // Name of your store in the storage
-      getStorage: () => localStorage, // Specify the storage type
+      name: "quiz-score-store",
+      storage,
+      version: 1,
     }
   )
 );
@@ -60,7 +108,8 @@ export const useCharacterStore = create<CharacterStore>(
     }),
     {
       name: "character-store",
-      getStorage: () => localStorage,
+      storage,
+      version: 1,
     }
   )
 );
@@ -75,7 +124,8 @@ export const useLocationStore = create<LocationStore>(
     }),
     {
       name: "location-store",
-      getStorage: () => localStorage,
+      storage,
+      version: 1,
     }
   )
 );
@@ -90,7 +140,8 @@ export const useBadgeStore = create<BadgeStore>(
     }),
     {
       name: "badge-store",
-      getStorage: () => localStorage,
+      storage,
+      version: 1,
     }
   )
 );
