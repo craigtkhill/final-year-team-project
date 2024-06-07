@@ -1,4 +1,14 @@
-# Getting Started
+# Eironauts Overview
+
+## Introduction
+
+Eironauts is an educational game designed to promote awareness and engagement with air quality issues in Ireland.
+
+## Prototype Access
+
+The Eironauts prototype can be played [here](https://eironauts.vercel.app/).
+
+# Installation
 
 ## Prerequisites
 
