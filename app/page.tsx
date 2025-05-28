@@ -25,7 +25,7 @@ export default function Home() {
         alt="Eironauts logo"
       />
       <p className="text-4xl font-bold text-center">Welcome to Eironauts!</p>
-      <p className="text-xl text-center w-full max-w-md text-justify mt-4">
+      <div className="text-xl text-center w-full max-w-md text-justify mt-4">
         <p>
           The Eironauts are a force for good; we are all about reducing air
           pollution and improving air quality. We’d like your help on our
@@ -43,7 +43,7 @@ export default function Home() {
           quality) could affect the world. When you’re ready, press the button
           below to begin the quiz!
         </p>
-      </p>
+      </div>
       <Button onClick={handleButtonClick} bgColor="#55ac78">
         Start Quiz
       </Button>
